@@ -37,7 +37,7 @@
 
               <v-text-field
                 v-model="tokenAmountIn"
-                :rules="rules"
+                :rules="[requiredRule, numberRule, balanceRule]"
                 class="input-number"
                 :value="0"
                 placeholder="0.00"
@@ -49,7 +49,7 @@
 
             <div class="divrow center jspace mobile-btn" style="width:350px;">
               <v-icon @click="swapValues()">mdi-swap-vertical</v-icon>
-              <span class="dm-light">{{ token0?.symbol }} = {{ midPrice2 | numericFormat(numericFormatConfig) }} {{ token1?.symbol }} </span>
+              <span v-if=" token0?.symbol && midPrice2 && token1?.symbol" class="dm-light">{{ token0?.symbol }} = {{ midPrice2 | numericFormat(numericFormatConfig) }} {{ token1?.symbol }} </span>
             </div>
 
 
@@ -80,7 +80,7 @@
 
               <v-text-field
                 v-model="tokenAmountOut"
-                :rules="rules"
+                :rules="[requiredRule, numberRule]"
                 class="input-number"
                 :value="0" placeholder="0.00"
                 @input="calculateTokenAmount(2)"
@@ -90,6 +90,7 @@
             <v-btn
               class="btn mobile-btn"
               style="width: 350px!important; height: 50px!important; margin-top: 15px;"
+              :loading="swapInProgress"
               @click="submitForm"
             >Swap
             </v-btn>
@@ -128,7 +129,6 @@
 <script>
 // import isMobile from '~/mixins/isMobile'
 import IUniswapV2Pair from '@uniswap/v2-core/build/IUniswapV2Pair.json'
-import { numericFormat } from '@vuejs-community/vue-filter-numeric-format'
 import routerV2ABI  from '~/static/abis/routerv2.json'
 import factoryABI  from '~/static/abis/factory.json'
 import ERC20ABI from '~/static/abis/erc20.json'
@@ -155,6 +155,7 @@ export default {
       midPrice1: 0,
       midPrice2: 0,
       tokens: undefined,
+      swapInProgress: false,
       heightChart: undefined,
       swapFrom: {
         img: require('~/assets/sources/tokens/database.svg'),
@@ -166,14 +167,9 @@ export default {
         name: "btc",
         amount: undefined,
       },
-      rules: [
-        v => !!v || 'Field is required',
-        v => /^\d+(\.\d+)?$/.test(v) || 'Invalid numeric input',
-        v => v > 0 || 'Value must be positive',
-      ],
       numericFormatConfig: {
         decimalSeparator: ".",
-        fractionDigitsMax: 2,
+        fractionDigitsMax: 4,
         fractionDigitsMin: 2,
         fractionDigitsSeparator: "",
         thousandsDigitsSeparator: ","
@@ -215,6 +211,29 @@ export default {
   },
   methods: {
 
+    balanceRule() {
+      if (this.tokenAmountIn > this.tokenInAmountUser) {
+        this.$alert('info', `Insufficient ${this.selectedItem1?.symbol} balance`)
+      }
+      return this.tokenAmountIn <= this.tokenInAmountUser || ''
+    },
+    requiredRule(value) {
+      if(!value && !this.firstLoad) {
+        this.$alert('info', 'This field is required')
+      }
+      return !!value || ''
+    },
+    numberRule(v) {
+      const regex = /^\d+(\.\d+)?$/
+      if( !regex.test(v)  && !this.firstLoad) {
+        this.$alert('info', 'Invalid numeric input')
+      }
+      if(v < 0) {
+        this.$alert('info', 'Value must be positive')
+
+      }
+      return regex.test(v) || ''
+    },
     submitForm() {
      if (this.$refs.form.validate()){
       this.swapTokensForTokens(
@@ -224,9 +243,11 @@ export default {
      }
     },
 
-    setMaxValue() {
-      this.tokenAmountIn = this.tokenInAmountUser | numericFormat(this.numericFormatConfig);
+    async setMaxValue() {
+      this.tokenAmountIn = (Math.round(this.tokenInAmountUser * 100) / 100).toFixed(2)
       this.getPricing()
+      await this.balanceOf(this.selectedItem1)
+      this.calculateTokenAmount(1)
     },
 
     styles() {
@@ -244,6 +265,8 @@ export default {
       const temp = this.selectedItem1
       this.selectedItem1 = this.selectedItem2
       this.selectedItem2 = temp
+      this.getPricing()
+      this.calculateTokenAmount(1)
     },
     calcPriceTo(event) {
       const item = this.swapFrom
@@ -264,8 +287,11 @@ export default {
     // so we have amountOut in order to use a direct contract call
 
     async approve(tokenAddres, amount) {
-      const tokenInContract = new web3.eth.Contract(ERC20ABI, tokenAddres);
+      try {
+        const tokenInContract = new web3.eth.Contract(ERC20ABI, tokenAddres);
       await tokenInContract.methods.approve(routerV2Address, amount).send({ from: this.$metamask.userAccount })
+      } catch (error) {
+      }
     },
 
     async balanceOf(token) {
@@ -281,7 +307,6 @@ export default {
         return pairAddress
       } else {
         this.$alert('cancel', 'Pair does not exist')
-
       }
     },
     async getTokenData(tokenAddress) {
@@ -307,31 +332,42 @@ export default {
     },
 
     async getPricing() {
-      const pairAddress = await factory.methods.getPair(this.selectedItem1.address, this.selectedItem2.address).call()
-      const pairContract = new web3.eth.Contract(IUniswapV2Pair.abi, pairAddress)
-      const [token0Address, token1Address] = await Promise.all([
-        pairContract.methods.token0().call(),
-        pairContract.methods.token1().call()])
-
-      const [token0, token1] = await Promise.all([
-        this.getTokenData(token0Address),
-        this.getTokenData(token1Address)
-      ])
-
       if(this.selectedItem1 != null && this.selectedItem2 != null) {
-        const reserves = await this.getReserves(token0.address, token1.address)
-        const midPrice1 = await (routerV2.methods.getAmountOut((1 * 10 ** token0.decimals).toString(), reserves.reserve0, reserves.reserve1).call())
-        const midPrice2 = await (routerV2.methods.getAmountOut((1 * 10 ** token1.decimals).toString(), reserves.reserve1, reserves.reserve0).call())
-        if(this.selectedItem1.symbol === token0.symbol){
-          this.midPrice1 = midPrice1 / 10 ** token1.decimals
-          this.midPrice2 = midPrice2 / 10 ** token0.decimals
-          this.token0 = token0
-          this.token1 = token1
-        }else {
-          this.midPrice1 = midPrice2 / 10 ** token0.decimals
-          this.midPrice2 = midPrice1 / 10 ** token1.decimals
-          this.token0 = token1
-          this.token1 = token0
+        const pairAddress = await factory.methods.getPair(this.selectedItem1.address, this.selectedItem2.address).call()
+        const pairContract = new web3.eth.Contract(IUniswapV2Pair.abi, pairAddress)
+        const [token0Address, token1Address] = await Promise.all([
+          pairContract.methods.token0().call(),
+          pairContract.methods.token1().call()])
+
+        const [token0, token1] = await Promise.all([
+          this.getTokenData(token0Address),
+          this.getTokenData(token1Address)
+        ])
+
+
+        try {
+          const reserves = await this.getReserves(token0.address, token1.address)
+
+          const midPrice1 = await (routerV2.methods.getAmountOut((1 * 10 ** token0.decimals).toString(), reserves.reserve0, reserves.reserve1).call())
+          const midPrice2 = await (routerV2.methods.getAmountOut((1 * 10 ** token1.decimals).toString(), reserves.reserve1, reserves.reserve0).call())
+          if(this.selectedItem1.symbol === token0.symbol){
+            this.midPrice1 = midPrice1 / 10 ** token1.decimals
+            this.midPrice2 = midPrice2 / 10 ** token0.decimals
+            this.token0 = token0
+            this.token1 = token1
+          }else {
+            this.midPrice1 = midPrice2 / 10 ** token0.decimals
+            this.midPrice2 = midPrice1 / 10 ** token1.decimals
+            this.token0 = token1
+            this.token1 = token0
+          }
+        } catch  {
+
+          this.$alert('cancel', 'Insuficient liquidity unable to swap ' + token0.symbol + "/" + token1.symbol)
+          this.midPrice1 = 0
+          this.midPrice2 = 0
+          this.token0 =  {}
+          this.token1 =  {}
         }
       }
     },
@@ -342,32 +378,43 @@ export default {
         case 1:
           amount = this.tokenAmountIn * this.midPrice2
           if(amount >= 0) {
-            this.tokenAmountOut = amount
+            this.tokenAmountOut = (Math.round(amount * 10000) / 10000).toFixed(2)
           }
         break;
 
         case 2:
           amount = this.tokenAmountOut * this.midPrice1
           if(amount >= 0) {
-            this.tokenAmountIn = amount
+            this.tokenAmountIn = (Math.round(amount * 100) / 100).toFixed(2)
           }
         break;
       }
     },
 
     async swapTokensForTokens(tokenIn, tokenOut) {
-      const deadline = Math.floor(Date.now() / 1000) + 60 * 20; // 20 mins time
-      await this.approve(tokenIn.address, BigInt((this.tokenAmountIn * 10 ** tokenIn.decimals)).toString().replace(/[.,]/g, ''))
-      const path = [tokenIn.address, tokenOut.address]
-      const myMethod =routerV2.methods.swapExactTokensForTokens(
-        BigInt((this.tokenAmountIn * 10 ** tokenIn.decimals)).toString().replace(/[.,]/g, ''),
-        BigInt((this.tokenAmountOut * 10 ** tokenOut.decimals)).toString().replace(/[.,]/g, ''),
-        path,
-        this.$metamask.userAccount,
-        deadline
-      )
-      const gasLimit = await myMethod.estimateGas({ from: this.$metamask.userAccount }) + 5000
-      await myMethod.send({from: this.$metamask.userAccount, gasLimit})
+      this.swapInProgress = true
+      const amountIn = Number(this.tokenAmountIn).toFixed(tokenIn.decimals)
+      const amountOut = Number(this.tokenAmountOut).toFixed(tokenOut.decimals)
+      await this.approve(tokenIn.address, BigInt((amountIn * 10 ** tokenIn.decimals)).toString())
+
+      try {
+        const deadline = Math.floor(Date.now() / 1000) + 60 * 20; // 20 mins time
+        const path = [tokenIn.address, tokenOut.address]
+        const myMethod =routerV2.methods.swapExactTokensForTokens(
+          BigInt((amountIn * 10 ** tokenIn.decimals)).toString(),
+          BigInt((amountOut - (amountOut* 0.015)) * 10 ** tokenOut.decimals).toString(),
+          path,
+          this.$metamask.userAccount,
+          deadline
+        )
+        const gasLimit = await myMethod.estimateGas({ from: this.$metamask.userAccount }) + 5000
+        await myMethod.send({from: this.$metamask.userAccount, gasLimit})
+      } catch (error) {
+          console.log(error)
+          const errorJSON = JSON.parse(error.toString().split("Internal JSON-RPC error.")[1])
+          this.$alert('cancel', errorJSON.message)
+      }
+      this.swapInProgress = false
     },
 
     swapETHForTokens() {},

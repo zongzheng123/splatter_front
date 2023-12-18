@@ -1,17 +1,54 @@
 <template>
-  <div id="home">
-    <img src="~/assets/sources/images/left-circle.svg" alt="circle" class="circle">
-    <img src="~/assets/sources/images/right-circle.svg" alt="circle" class="circle2">
+  <div id="landing-new">
+    <section id="hero">
+      <div v-for="n in 4" :key="n" :class="`decoration-${n}`" />
 
-    <section class="section1-landing">
-      <img src="~/assets/sources/logos/logo_black.svg" alt="Logo" class="logo">
+      <div>
+        <h1>
+          The next Generation<br>
+          <span>Dapps Infrastructure.</span>
+        </h1>
 
-      <h1 class="tcenter font1">Local Innovative <br> <span>Dex On</span> 📜 <span>Scroll</span></h1>
+        <p>a community driven Dapps’s Hub On Scroll 📜.  Featuring SocialFi, DeFi, GasFi & more.</p>
 
-      <div class="divrow wrap container-btns center">
-        <v-btn v-for="(item,index) in dataBtns" :key="index" :href="item.url" target="_blank" @click="item.name == 'Launch App' ? $router.push(basePath2(item.to)) : ''">
-          <img v-if="item.img" :src="item.img" :alt="item.alt" class="mr-1"> {{ item.name }}
-        </v-btn>
+        <aside class="d-flex flex-wrap justify-center align-center mt-14" style="gap: 16px;">
+          <v-btn href="https://twitter.com/Splatter_Proto" target="_blank">
+            Latest news
+          </v-btn>
+
+          <a href="https://yexlabs.gitbook.io/splatterprotocol/">
+            Explore Docs
+            <v-icon size="16">mdi-chevron-right</v-icon>
+          </a>
+        </aside>
+      </div>
+    </section>
+
+
+    <section id="content">
+
+      <aside id="prom-bar">
+        <h6>TRUSTED BY</h6>
+
+        <div class="d-flex justify-space-between scrollx" style="gap: 30px;">
+          <img v-for="(item, i) in promLogos" :key="i" :src="item.img" :alt="item.alt">
+        </div>
+      </aside>
+
+
+      <h6 class="text-gradient text-center">UNLIMITED POSSIBILITIES</h6>
+      <h3 class="text-center" style="margin-bottom: 73px;">
+        Explore Dapps that support developers, founders, and communities.
+      </h3>
+
+      <div class="grid" style="row-gap: 30px; column-gap: 40px;">
+        <v-card v-for="(item, i) in dataExplore" :key="i">
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.desc }}</p>
+          <a v-if="!item.commingSoon" class="text-gradient" @click="action(item)">Learn More</a>
+
+          <img :src="item.img" :alt="`${item.title} icon`">
+        </v-card>
       </div>
     </section>
   </div>
@@ -23,36 +60,49 @@ export default {
   layout:'landing',
   data() {
     return {
-      dataBtns: [
+      promLogos: [
         {
-          name: "Launch App",
-          to: "/swap"
+          img: require("@/assets/sources/logos/omnikingdoms.svg"),
+          alt: "omnikingdoms logo",
         },
         {
-          img: require("~/assets/sources/icons/twitter.svg"),
-          alt: "Twitter logo",
-          name: "Twitter",
-          url: "https://x.com/Splatter_Proto?t=Q4ZOPNNTi3Jk9xF9l8CRLQ&s=08",
+          img: require("@/assets/sources/logos/axelar.svg"),
+          alt: "axelar logo",
         },
         {
-          img: require("~/assets/sources/icons/discord.svg"),
-          alt: "Discord logo",
-          name: "Discord",
-          url: "https://discord.com/invite/dDC8rYTFju"
+          img: require("@/assets/sources/logos/prom-logo.svg"),
+          alt: "logo",
         },
         {
-          img: require("~/assets/sources/icons/medium.svg"),
-          alt: "Medium logo",
-          name: "Medium",
-          url: "https://medium.com/@splatterproto"
+          img: require("@/assets/sources/logos/chainlink.svg"),
+          alt: "chainlink logo",
         },
         {
-          img: require("~/assets/sources/icons/gitbook.png"),
-          alt: "Gitbook logo",
-          name: "Gitbook",
-          url: "https://yexlabs.gitbook.io/splatterprotocol/",
+          img: require("@/assets/sources/logos/rhino.svg"),
+          alt: "rhino logo",
         },
-      ]
+      ],
+      dataExplore: [
+        {
+          title: "XSwap",
+          desc: "Our DEX provides seamless trading with efficient liquidity management, empowering users to engage in decentralized exchanges effortlessly.",
+          img: require("@/assets/sources/images/bg-xswap.svg"),
+          to: "/landing/xswap",
+        },
+        {
+          title: "XStarter",
+          desc: "Launching your Individual Sovereign Tokens with splatter protocol.",
+          img: require("@/assets/sources/images/bg-xstarter.svg"),
+          to: "/landing/xstarter",
+        },
+        {
+          title: "XDAO",
+          desc: "A Community-run DAO with built-in trust layer to improve Ethereum Scalability.",
+          img: require("@/assets/sources/images/bg-xdao.svg"),
+          to: "",
+          commingSoon: true,
+        },
+      ],
     }
   },
   head() {
@@ -62,9 +112,16 @@ export default {
     }
   },
   methods: {
-
+    action(item) {
+      if (item.commingSoon) {
+        this.$alert('warning', "comming soon")
+      }
+      else {
+        this.$router.push(item.to)
+      }
+    }
   }
 };
 </script>
 
-<style src="~/assets/styles/pages/landing-page.scss" lang="scss" />
+<style src="~/assets/styles/pages/landing-new.scss" lang="scss" />

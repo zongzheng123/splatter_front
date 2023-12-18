@@ -9,6 +9,7 @@
         --bg-snackbar: ${item.key === 'success' ? '#E1D8D1'
         : item.key === 'warning' ? '#E1D8D1'
         : item.key === 'cancel' ? '#E1D8D1'
+        : item.key === 'info' ? '#E1D8D1'
         : ''}`
       "
     >
@@ -16,7 +17,7 @@
         <v-icon :color="item.color" size="1.375em">{{ item.icon }}</v-icon>
         <span class="hspan" style="--fs: 1em; --c: #2D3748">{{$t(item.message)}}</span>
       </div>
-      
+
       <v-btn icon @click="dataAlerts.splice(i, 1)">
         <v-icon color="#2D3748" size="1.1875em">mdi-close</v-icon>
       </v-btn>
@@ -38,7 +39,7 @@ export default {
       const alert = {
         key,
         message,
-        color: `var(--${key === 'cancel' ? 'error' : key})`,
+        color: `var(--${key === 'cancel' ? 'error' : key === 'info' ? 'info' : key})`,
         icon: key === 'success' ? 'mdi-check-circle' : 'mdi-information',
         model: true
       }

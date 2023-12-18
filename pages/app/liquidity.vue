@@ -45,7 +45,7 @@
                     solo
                     class="input"
                     placeholder="-.--"
-                    :rules="rules"
+                    :rules="[rules, numberRule, requiredRule, balanceRule]"
                     @input="calculateTokenAmount(1)"
                     ></v-text-field>
                     <p class="p light-span">Balance: {{balanceToken1 | numericFormat(numericFormatConfig)}}</p>
@@ -85,7 +85,7 @@
                     solo
                     class="input"
                     placeholder="-.--"
-                    :rules="rules"
+                    :rules="[rules, numberRule, requiredRule]"
                     @input="calculateTokenAmount(2)"
                     ></v-text-field>
                     <p class="p light-span">Balance: {{balanceToken2 | numericFormat(numericFormatConfig)}}</p>
@@ -93,7 +93,7 @@
                 </div>
               </v-form>
 
-              <div v-if="selectedItem1 && selectedItem2" class="container-select mt-4 mb-4 divrow jspace">
+              <div v-if="selectedItem1 && selectedItem2 && midPrice1" class="container-select mt-4 mb-4 divrow jspace">
                 <div  class="divcol astart" style="gap: 5px;">
                   <span class="bold font13">{{ midPrice1 | numericFormat(numericFormatConfig) }}</span>
                   <span class="font13">{{ token0?.symbol }} per {{ token1?.symbol }}</span>
@@ -108,7 +108,8 @@
                 </div> -->
               </div>
 
-              <v-btn class="btn btn-add mb-4 mt-4" @click="submitForm">Add</v-btn>
+
+              <v-btn class="btn btn-add mb-4 mt-4" :disabled="!pairExist" @click="submitForm">Add</v-btn>
             </v-window-item>
 
             <v-window-item :value="2" class="window-2 divcol acenter">
@@ -170,7 +171,7 @@
           <div v-if="lengthPairs < 1" class="divcol center" style="gap: 15px;">
             <p class="p bold mt-3">You dont have any LP’s</p>
             <img src="~/assets/sources/images/not-lps.svg" alt="Not Lps">
-            <v-btn class="btn mt-2" style="min-width: 100%!important;">Swap Tokens</v-btn>
+            <v-btn class="btn mt-2" style="min-width: 100%!important;" @click="$router.push('swap')">Swap Tokens</v-btn>
           </div>
 
           <div v-for="(item, index) in allPairs" :key="index" class="jspace mb-7  mt-7 hoverable border-bottom">
@@ -184,7 +185,8 @@
 
             <div class="divcol center">
               <span v-if="item.fiat" class="bold-title mb-2">{{ item.fiat }}</span>
-              <span class="light-span">{{ item.crypto_balance }}</span>
+              <span class="light-span">{{ item.token0Balance | numericFormat(numericFormatConfig) }} {{ item.token0.symbol }}</span>
+              <span class="light-span">{{ item.token1Balance | numericFormat(numericFormatConfig) }} {{ item.token1.symbol }}</span>
             </div>
           </div>
         </v-card>
@@ -208,7 +210,6 @@ import factoryABI from '~/static/abis/factory.json'
 import ERC20ABI from '~/static/abis/erc20.json'
 import scrollTokens from '~/static/tokens/scroll_tokens.json'
 import scrollSepoliaTokens from '~/static/tokens/scroll_alpha_tokens.json'
-
 const Web3 = require('web3')
 const web3 = new Web3(window.ethereum);
 let routerV2Address = "0x2f2f7197d19A13e8c72c1087dD29d555aBE76C5C"
@@ -216,15 +217,22 @@ let factoryV2Address = "0xa8ef07AEbC64A96Ae264f3Bd5cC37fF5B28B1545"
 let routerV2;
 let factory;
 
+// TODO show user LP shares or participation
+
 export default {
   name: "LiquidityPage",
   data() {
     return {
+      firstLoad: true,
       lengthPairs: null,
       windowStep: 1,
       tokens: undefined,
       items1: this.tokens,
       items2: this.tokens,
+      /* inputToken1: {
+        amountToken1: undefined,
+        balanceToken1: 0,
+      }, */
       amountToken1: undefined,
       amountToken2: undefined,
       balanceToken1: 0,
@@ -238,6 +246,7 @@ export default {
       percent: 0.25,
       midPrice1: 0,
       midPrice2: 0,
+      pairExist:false,
       dataCurrentlyLps:[
         {
           img_left: 'btc',
@@ -267,11 +276,6 @@ export default {
         },
       ],
       allPairs: undefined,
-      rules: [
-        v => !!v || 'Field is required',
-        v => /^\d+(\.\d+)?$/.test(v) || 'Invalid numeric input',
-        v => v > 0 || 'Value must be positive',
-      ],
       numericFormatConfig: {
         decimalSeparator: ".",
         fractionDigitsMax: 2,
@@ -309,11 +313,35 @@ export default {
     }
     this.allPairs = await this.getAllPairs()
     this.lengthPairs = this.allPairs.length
+    this.firstLoad = false
   },
   methods: {
-
+    balanceRule() {
+      if (this.amountToken1 > this.balanceToken1 && this.selectedItem1) {
+        this.$alert('info', `Insufficient ${this.selectedItem1?.symbol} balance`)
+        return this.tokenAmountIn <= this.tokenInAmountUser || ''
+      }
+      if (this.amountToken2 > this.balanceToken2 && this.selectedItem2) {
+        this.$alert('info', `Insufficient ${this.selectedItem1?.symbol} balance`)
+        return this.tokenAmountIn <= this.tokenInAmountUser || ''
+      }
+    },
     requiredRule(value) {
-      return !!value || 'This field is required';
+      if(!value && !this.firstLoad) {
+        this.$alert('info', 'This field is required')
+      }
+      return !!value || ''
+    },
+    numberRule(v) {
+      const regex = /^\d+(\.\d+)?$/
+      if( !regex.test(v)  && !this.firstLoad) {
+        this.$alert('info', 'Invalid numeric input')
+      }
+      if(v < 0) {
+        this.$alert('info', 'Value must be positive')
+
+      }
+      return regex.test(v) || ''
     },
     selectPair(pair) {
       this.selectedItemRemove1 = pair.token0
@@ -336,12 +364,14 @@ export default {
     },
 
     swapValues() {
-      const temp = this.selectedItem1;
-      this.selectedItem1 = this.selectedItem2;
-      this.selectedItem2 = temp;
-      this.getPricing()
-      this.getUserBalance(1)
-      this.getUserBalance(2)
+      if(this.selectedItem1 && this.selectedItem2){
+        const temp = this.selectedItem1;
+        this.selectedItem1 = this.selectedItem2;
+        this.selectedItem2 = temp;
+        this.getPricing()
+        this.getUserBalance(1)
+        this.getUserBalance(2)
+      }
     },
 
     async getTokenData(tokenAddress) {
@@ -357,12 +387,21 @@ export default {
       token.decimals = decimals
       return token
     },
+
+    async getUserPoolBalance(pairAddress) {
+      const pairContract = new web3.eth.Contract(IUniswapV2Pair.abi, pairAddress);
+      const {reserve0, reserve1} = await pairContract.methods.getReserves().call()
+      const totalSupply = await pairContract.methods.totalSupply().call()
+      const LPTokenBalance = await this.balanceOf(pairAddress)
+      const LPtoken0Balance = reserve0 * LPTokenBalance / totalSupply
+      const LPtoken1Balance = reserve1 * LPTokenBalance / totalSupply
+      return {LPtoken0Balance, LPtoken1Balance}
+    },
     // we can not get user pools but we can findout in wich pool our user has LPTokens
 
     async getAllPairs() {
       const allPairs = []
       const pairsCreated = await factory.methods.allPairsLength().call()
-
 
       for(let i = 0; i < pairsCreated; i++) {
         const fetch = this.fetchPair(i);
@@ -387,12 +426,15 @@ export default {
           pairContract.methods.token0().call(),
           pairContract.methods.token1().call()])
 
-          const [token0, token1] = await Promise.all([
+          const [token0, token1, {LPtoken0Balance, LPtoken1Balance}] = await Promise.all([
             this.getTokenData(token0Address),
-            this.getTokenData(token1Address)
+            this.getTokenData(token1Address),
+            this.getUserPoolBalance(pair.address)
           ])
           pair.token0 = token0
+          pair.token0Balance = LPtoken0Balance / 10 ** token0.decimals
           pair.token1 = token1
+          pair.token1Balance = LPtoken1Balance / 10 ** token1.decimals
           pair.poolName = pair.token0.symbol + "-" + pair.token1.symbol
       }
       return pair
@@ -403,27 +445,51 @@ export default {
       await tokenInContract.methods.approve(routerV2Address, amount).send({ from: this.$metamask.userAccount })
     },
 
-    async getReserves(tokenInAddress, tokenOutAddress) {
-      const pairAddress = await factory.methods.getPair(tokenInAddress, tokenOutAddress).call()
-      const pairContract = new web3.eth.Contract(IUniswapV2Pair.abi, pairAddress)
-      const res = await pairContract.methods.getReserves().call()
-      return res
+    async getReserves(tokenIn, tokenOut) {
+      try {
+        const pairAddress = await factory.methods.getPair(tokenIn.address, tokenOut.address).call()
+        const pairContract = new web3.eth.Contract(IUniswapV2Pair.abi, pairAddress)
+        const res = await pairContract.methods.getReserves().call()
+        return res
+      } catch  {
+        this.$alert('cancel', 'Insuficient liquidity unable to show ratios for: ' + tokenIn.symbol + "/" + tokenOut.symbol)
+      }
+    },
+
+    async getPair(addressA, addressB){
+      const pairAddress = await factory.methods.getPair(addressA,addressB).call()
+      const pairExist = pairAddress !== '0x0000000000000000000000000000000000000000'
+      if (pairExist) {
+        this.pairExist = true
+        return pairAddress
+      } else {
+        this.pairExist = false
+        this.$alert('cancel', 'Pair does not exist')
+      }
     },
 
     async getPricing() {
-      const pairAddress = await factory.methods.getPair(this.selectedItem1.address, this.selectedItem2.address).call()
+      if(this.selectedItem1 === null || this.selectedItem2 === null) {
+        return
+      }
+      const pairAddress = await this.getPair(this.selectedItem1.address, this.selectedItem2.address)
+      if(!pairAddress){
+        this.midPrice1 = 0
+        this.midPrice2 = 0
+        return
+      }
       const pairContract = new web3.eth.Contract(IUniswapV2Pair.abi, pairAddress)
       const [token0Address, token1Address] = await Promise.all([
         pairContract.methods.token0().call(),
-        pairContract.methods.token1().call()])
-
+        pairContract.methods.token1().call()
+      ])
       const [token0, token1] = await Promise.all([
         this.getTokenData(token0Address),
         this.getTokenData(token1Address)
       ])
 
-      if(this.selectedItem1 != null && this.selectedItem2 != null) {
-        const reserves = await this.getReserves(token0.address, token1.address)
+      try {
+        const reserves = await this.getReserves(token0, token1)
         const midPrice1 = await (routerV2.methods.getAmountOut((1 * 10 ** token0.decimals).toString(), reserves.reserve0, reserves.reserve1).call())
         const midPrice2 = await (routerV2.methods.getAmountOut((1 * 10 ** token1.decimals).toString(), reserves.reserve1, reserves.reserve0).call())
         if(this.selectedItem1.symbol === token0.symbol){
@@ -437,6 +503,10 @@ export default {
           this.token0 = token1
           this.token1 = token0
         }
+      } catch (error) {
+        this.$alert('cancel', error)
+        this.midPrice1 = 0
+        this.midPrice2 = 0
       }
     },
     calculateTokenAmount(key) {
@@ -445,14 +515,15 @@ export default {
         case 1:
           amount = this.amountToken1 * this.midPrice2
           if(amount >= 0) {
-            this.amountToken2 = amount
+            this.amountToken2 =  (Math.round(amount * 100) / 100).toFixed(2)
+
           }
         break;
 
         case 2:
           amount = this.amountToken2 * this.midPrice1
           if(amount >= 0) {
-            this.amountToken1 = amount
+            this.amountToken1 = (Math.round(amount * 100) / 100).toFixed(2)
           }
         break;
       }
@@ -483,7 +554,8 @@ export default {
     },
 
     async addLiquidity(tokenA, tokenB, amountADesired, amountBDesired,) {
-
+      Number(amountADesired).toFixed(tokenA.decimals)
+      Number(amountBDesired).toFixed(tokenB.decimals)
       await Promise.all([
         this.approve(tokenA.address, BigInt((amountADesired * 10 ** tokenA.decimals)).toString().replace(/[.,]/g, '')),
         this.approve(tokenB.address, BigInt((amountBDesired * 10 ** tokenB.decimals)).toString().replace(/[.,]/g, ''))
@@ -518,9 +590,9 @@ export default {
       const percent = this.percent
       const totalLiquidity = await this.balanceOf(pairAddress) / 10 ** 18
       let liquidity = totalLiquidity
-      if(this.percent < 1){
+
         liquidity = ((totalLiquidity * percent) * 10 ** 18 ).toString().split(".")[0]
-      }
+
       if(liquidity){
         await this.approve(pairAddress, liquidity)
         .catch(error => {

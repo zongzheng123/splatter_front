@@ -17,7 +17,7 @@
         <a
           v-for="(item, i) in dataNavbar" :key="i"
           :class="{active: $route.path.includes(item.to)}"
-          @click="item.name !== 'portfolio' ? $router.push(basePath2(item.to)) : ''">
+          @click="item.name !== 'home' ? $router.push(basePath2(item.to)) : $router.push(item.to)">
           {{item.name}}
         </a>
       </aside>
@@ -87,6 +87,10 @@ export default {
       itemSelected: undefined,
       dataNavbar: [
         {
+          name: "home",
+          to: "/landing/xswap"
+        },
+        {
           name: "Swap",
           to: "/swap"
         },
@@ -102,10 +106,10 @@ export default {
           name: "Liquidity",
           to: "/liquidity"
         },
-        /* {
-          name: "Multichain Swap",
+        {
+          name: "Crosschain Swap",
           to: "/bridge-tokens"
-        }, */
+        },
       ],
       wallet: "Login",
       isLogged: true,
