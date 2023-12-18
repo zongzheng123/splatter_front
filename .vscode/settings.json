@@ -53,4 +53,7 @@
 		"editor.wordBasedSuggestions": false,
 	},
 	"todo-tree.tree.showBadges": true,
+	"i18n-ally.localesPaths": [
+		"i18n"
+	],
 }
