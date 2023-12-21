@@ -128,7 +128,7 @@ export default {
               // desc: "Description of product",
               icon: require("@/assets/sources/icons/ticket-icon.svg"),
               iconSize: "18px",
-              to: "/app/xswap",
+              to: "/landing/xswap",
             },
             {
               name: "XGasplan",
