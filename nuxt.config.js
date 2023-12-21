@@ -1,5 +1,6 @@
 // import { webpack } from 'webpack'
 import colors from 'vuetify/es5/util/colors'
+import UglifyjsWebpackPlugin from 'uglifyjs-webpack-plugin'
 
 const development = process.env.NODE_ENV !== 'production'
 
@@ -211,9 +212,18 @@ export default {
     port: '8000', // default: 3000
   },
 
+
+  vue: {
+    config: {
+      productionTip: false,
+      devtools: true
+    }
+  },
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     publicPath: development ? '/splatter/' : '/',
+    // devtools: development,
     // TODO: read about this to fix it.
     // plugins: [
     //   new webpack.ProvidePlugin({
@@ -232,13 +242,17 @@ export default {
     //   }),
     // ],
     extend(config, ctx) {
-      config.module.rules.push({
-        exclude: /(node_modules)/,
-      })
+      config.optimization.minimizer = [new UglifyjsWebpackPlugin({
+        uglifyOptions: {
+          compress: {
+            // if in production mode. remove all console functions besides console.error
+            pure_funcs: development ? [] : ['console.log', 'console.info', 'console.debug', 'console.warn'],
+           }
+        }
+      })]
       config.module.rules.push({
         test: /\.(c|m)?jsx?$/i,
         include: [/node_modules.*?(@0xsquid)|(cosmjs-types)|(ethers)|(@cosmjs)/],
-        // exclude: /node_modules\/ethers\/lib.esm\/providers\/provider-browser.js/,
         use: {
           loader: 'babel-loader',
           options: {
