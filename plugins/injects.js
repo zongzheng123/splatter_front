@@ -27,8 +27,8 @@ export default ({app}, inject) => {
   // alerts =========================================================================================================//
   const alerts = (key, message) => {
     if (key === "success" || key === "cancel" || key === "warning" || key === "info") {
-      app.router.app.$children.find(data=>data.$el === document.querySelector(".v-application")).$refs.alerts.
-        GenerateAlert(key, message);
+      // app.router.app.$children.find(data=>data.$el?.className?.split(' ').includes('v-application')).$refs.alerts.
+      //   GenerateAlert(key, message);
     } else {
       throw new Error('Invalid key, try "success", "cancel", info or "warning"')
     }
@@ -85,11 +85,11 @@ export default ({app}, inject) => {
   const formData = (form) => {
     const formData = new FormData();
     for (const [keys, values] of Object.entries(form)) {
-      // set empty string in null 
+      // set empty string in null
       if (form[keys] && typeof form[keys] === "object") {
         Object.keys(values).forEach(key => { values[key] ??= "" })
       } else { form[keys] ??= "" }
-      
+
       // push to form data
       const
         excludeUrl = !(/\.(gif|jpg|jpeg|tiff|png)$/i).test(values),

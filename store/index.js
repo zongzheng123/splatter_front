@@ -63,7 +63,7 @@ export const mutations = {
 
 export const actions = {
   modalConnect() {
-    const layout = this.$router.app.$children.find(data=>data.$el === document.getElementById("layout"));
+    const layout = this.$router.app.$children.find(data=>data.$el === document.getElementById("landing-layout"));
     layout.$refs.connect.modalConnect = true
   },
   // getData({commit}) {

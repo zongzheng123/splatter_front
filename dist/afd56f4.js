@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[16],{1449:function(e,n,a){"use strict";a.r(n),n.default={pageNotFound:"La página no existe",otherError:"Ha ocurrido un error",buttonTitle:"Página de inicio",successMessage:"Transacción completa. Ver tx!",warningMessage:"Transacción pendiente",cancelMessage:"Transacción fallida. Inténtalo de nuevo",infoMessage:""}}}]);

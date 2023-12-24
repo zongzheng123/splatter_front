@@ -12,38 +12,22 @@ dependencies:
     specifier: 0.1.31
     version: 0.1.31(typescript@4.9.5)
   '@babel/eslint-parser':
-<<<<<<< Updated upstream
-    specifier: ^7.16.3
-=======
     specifier: ^7.23.3
->>>>>>> Stashed changes
     version: 7.23.3(@babel/core@7.23.6)(eslint@8.56.0)
   '@metamask/detect-provider':
     specifier: ^2.0.0
     version: 2.0.0
   '@metamask/sdk':
-<<<<<<< Updated upstream
-    specifier: ^0.3.0
-    version: 0.3.3(react-native@0.71.14)(react@18.2.0)
-  '@nuxtjs/apollo':
-    specifier: ^4.0.1-rc.5
-    version: 4.0.1-rc.5(@types/node@18.15.13)(@vue/cli-shared-utils@4.5.19)(apollo-cache-inmemory@1.6.6)(graphql-tag@2.12.6)(react-dom@16.14.0)(react@18.2.0)(typescript@4.9.5)
-=======
     specifier: ^0.3.3
     version: 0.3.3(react-native@0.71.14)(react@18.2.0)
   '@nuxtjs/apollo':
     specifier: 4.0.1-rc.5
-    version: 4.0.1-rc.5(@vue/cli-shared-utils@4.5.19)(apollo-cache-inmemory@1.6.6)(graphql-tag@2.12.6)(react-dom@16.14.0)(react@18.2.0)(typescript@4.9.5)
->>>>>>> Stashed changes
+    version: 4.0.1-rc.5(@types/node@18.19.3)(@vue/cli-shared-utils@4.5.19)(apollo-cache-inmemory@1.6.6)(graphql-tag@2.12.6)(react-dom@16.14.0)(react@18.2.0)(typescript@4.9.5)
   '@nuxtjs/axios':
     specifier: ^5.13.6
     version: 5.13.6
   '@nuxtjs/i18n':
-<<<<<<< Updated upstream
-    specifier: ^7.3.0
-=======
     specifier: ^7.3.1
->>>>>>> Stashed changes
     version: 7.3.1(vue@2.7.15)
   '@uniswap/sdk':
     specifier: ^3.0.3
@@ -58,20 +42,8 @@ dependencies:
     specifier: ^1.8.0
     version: 1.8.0(@babel/core@7.23.6)
   apexcharts:
-<<<<<<< Updated upstream
-    specifier: ^3.44.0
-    version: 3.45.0
-  core-js:
-    specifier: ^3.19.3
-    version: 3.34.0
-  ethers:
-    specifier: ^4.0.0
-    version: 4.0.49
-  fs:
-    specifier: ^0.0.1-security
-=======
     specifier: ^3.45.0
-    version: 3.45.0
+    version: 3.45.1
   core-js:
     specifier: ^3.34.0
     version: 3.34.0
@@ -80,7 +52,6 @@ dependencies:
     version: 4.0.49
   fs:
     specifier: 0.0.1-security
->>>>>>> Stashed changes
     version: 0.0.1-security
   graphql-tag:
     specifier: ^2.12.6
@@ -89,89 +60,48 @@ dependencies:
     specifier: ^1.4.1
     version: 1.4.1
   near-api-js:
-<<<<<<< Updated upstream
-    specifier: ^1.0.0
-    version: 1.1.0
-  nuxt:
-    specifier: ^2.15.8
-=======
     specifier: ^1.1.0
     version: 1.1.0
   nuxt:
     specifier: ^2.17.2
->>>>>>> Stashed changes
     version: 2.17.2(consola@3.2.3)(prettier@2.8.8)(react-dom@16.14.0)(react@18.2.0)(typescript@4.9.5)(vue@2.7.15)
   parallax-js:
     specifier: ^3.1.0
     version: 3.1.0
   vue:
-<<<<<<< Updated upstream
-    specifier: ^2.7.14
-    version: 2.7.15
-  vue-advanced-chat:
-    specifier: ^2.0.1
-=======
     specifier: ^2.7.15
     version: 2.7.15
   vue-advanced-chat:
     specifier: ^2.0.10
->>>>>>> Stashed changes
     version: 2.0.10
   vue-apexcharts:
     specifier: ^1.6.2
-    version: 1.6.2(apexcharts@3.45.0)
+    version: 1.6.2(apexcharts@3.45.1)
   vue-browser-geolocation:
     specifier: ^1.8.0
     version: 1.8.0
   vue-debounce:
-<<<<<<< Updated upstream
-    specifier: ^4.0.0
-=======
     specifier: ^4.0.1
->>>>>>> Stashed changes
     version: 4.0.1(vue@2.7.15)
   vue-filter-number-format:
     specifier: ^3.0.1
     version: 3.0.1(numeral@2.0.6)
   vue-server-renderer:
-<<<<<<< Updated upstream
-    specifier: ^2.7.14
-=======
     specifier: ^2.7.15
->>>>>>> Stashed changes
     version: 2.7.15
   vue-session:
     specifier: ^1.0.0
     version: 1.0.0
   vue-template-compiler:
-<<<<<<< Updated upstream
-    specifier: ^2.7.14
-    version: 2.7.15
-  vue2-gmap-custom-marker:
-    specifier: ^6.1.0
-=======
     specifier: ^2.7.15
     version: 2.7.15
   vue2-gmap-custom-marker:
     specifier: ^6.1.1
->>>>>>> Stashed changes
     version: 6.1.1
   vue2-google-maps:
     specifier: ^0.10.7
     version: 0.10.7
   vuetify:
-<<<<<<< Updated upstream
-    specifier: ^2.6.1
-    version: 2.7.1(vue@2.7.15)
-  web3:
-    specifier: ^1.8.1
-    version: 1.10.3
-  web3modal:
-    specifier: ^1.9.9
-    version: 1.9.12(@babel/core@7.23.6)(react-is@18.2.0)
-  webpack:
-    specifier: ^4.46.0
-=======
     specifier: ^2.7.1
     version: 2.7.1(vue@2.7.15)
   web3:
@@ -182,7 +112,6 @@ dependencies:
     version: 1.9.12(@babel/core@7.23.6)(react-is@18.2.0)
   webpack:
     specifier: ^4.47.0
->>>>>>> Stashed changes
     version: 4.47.0
 
 devDependencies:
@@ -190,16 +119,11 @@ devDependencies:
     specifier: ^12.0.0
     version: 12.0.0(eslint@8.56.0)
   '@nuxtjs/eslint-module':
-<<<<<<< Updated upstream
-    specifier: ^3.0.2
-=======
     specifier: ^3.1.0
->>>>>>> Stashed changes
     version: 3.1.0(eslint@8.56.0)(webpack@4.47.0)
   '@nuxtjs/vuetify':
     specifier: ^1.12.3
     version: 1.12.3(vue@2.7.15)(webpack@4.47.0)
-<<<<<<< Updated upstream
   cz-conventional-changelog:
     specifier: ^3.3.0
     version: 3.3.0(typescript@4.9.5)
@@ -220,40 +144,16 @@ devDependencies:
     version: 8.4.32
   prettier:
     specifier: ^2.5.1
-=======
-  eslint:
-    specifier: ^8.56.0
-    version: 8.56.0
-  eslint-config-prettier:
-    specifier: ^8.10.0
-    version: 8.10.0(eslint@8.56.0)
-  eslint-plugin-nuxt:
-    specifier: ^3.2.0
-    version: 3.2.0(eslint@8.56.0)
-  eslint-plugin-vue:
-    specifier: ^8.7.1
-    version: 8.7.1(eslint@8.56.0)
-  postcss:
-    specifier: ^8.4.32
-    version: 8.4.32
-  prettier:
-    specifier: ^2.8.8
->>>>>>> Stashed changes
     version: 2.8.8
   typescript:
     specifier: ^4.9.5
     version: 4.9.5
-<<<<<<< Updated upstream
   uglifyjs-webpack-plugin:
     specifier: ^2.2.0
     version: 2.2.0(webpack@4.47.0)
   vue-tsc:
     specifier: ^1.8.22
-=======
-  vue-tsc:
-    specifier: ^1.8.25
->>>>>>> Stashed changes
-    version: 1.8.25(typescript@4.9.5)
+    version: 1.8.26(typescript@4.9.5)
 
 packages:
 
@@ -2017,7 +1917,6 @@ packages:
       '@babel/helper-validator-identifier': 7.22.20
       to-fast-properties: 2.0.0
 
-<<<<<<< Updated upstream
   /@commitlint/config-validator@18.4.3:
     resolution: {integrity: sha512-FPZZmTJBARPCyef9ohRC9EANiQEKSWIdatx5OlgeHKu878dWwpyeFauVkhzuBRJFcCA4Uvz/FDtlDKs008IHcA==}
     engines: {node: '>=v18'}
@@ -2044,10 +1943,10 @@ packages:
       '@commitlint/execute-rule': 18.4.3
       '@commitlint/resolve-extends': 18.4.3
       '@commitlint/types': 18.4.3
-      '@types/node': 18.15.13
+      '@types/node': 18.19.3
       chalk: 4.1.2
       cosmiconfig: 8.3.6(typescript@4.9.5)
-      cosmiconfig-typescript-loader: 5.0.0(@types/node@18.15.13)(cosmiconfig@8.3.6)(typescript@4.9.5)
+      cosmiconfig-typescript-loader: 5.0.0(@types/node@18.19.3)(cosmiconfig@8.3.6)(typescript@4.9.5)
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
@@ -2080,8 +1979,6 @@ packages:
     dev: true
     optional: true
 
-=======
->>>>>>> Stashed changes
   /@confio/ics23@0.6.8:
     resolution: {integrity: sha512-wB6uo+3A50m0sW/EWcU64xpV/8wShZ6bMTa7pF8eYsTrSkQA7oLUIJcs/wb8g4y2Oyq701BaGiO6n/ak5WXO1w==}
     dependencies:
@@ -2600,7 +2497,7 @@ packages:
       '@babel/runtime': 7.23.6
       '@emotion/hash': 0.9.1
       '@emotion/memoize': 0.8.1
-      '@emotion/serialize': 1.1.2
+      '@emotion/serialize': 1.1.3
       babel-plugin-macros: 3.1.0
       convert-source-map: 1.9.0
       escape-string-regexp: 4.0.0
@@ -2633,8 +2530,8 @@ packages:
     resolution: {integrity: sha512-W2P2c/VRW1/1tLox0mVUalvnWXxavmv/Oum2aPsRcoDJuob75FC3Y8FbpfLwUegRcxINtGUMPq0tFCvYNTBXNA==}
     dev: false
 
-  /@emotion/react@11.11.1(react@18.2.0):
-    resolution: {integrity: sha512-5mlW1DquU5HaxjLkfkGN1GA/fvVGdyHURRiX/0FHl2cfIfRxSOfmxEH5YS43edp0OldZrZ+dkBKbngxcNCdZvA==}
+  /@emotion/react@11.11.3(react@18.2.0):
+    resolution: {integrity: sha512-Cnn0kuq4DoONOMcnoVsTOR8E+AdnKFf//6kUWc4LCdnxj31pZWn7rIULd6Y7/Js1PiPHzn7SKCM9vB/jBni8eA==}
     peerDependencies:
       '@types/react': '*'
       react: '>=16.8.0'
@@ -2645,7 +2542,7 @@ packages:
       '@babel/runtime': 7.23.6
       '@emotion/babel-plugin': 11.11.0
       '@emotion/cache': 11.11.0
-      '@emotion/serialize': 1.1.2
+      '@emotion/serialize': 1.1.3
       '@emotion/use-insertion-effect-with-fallbacks': 1.0.1(react@18.2.0)
       '@emotion/utils': 1.2.1
       '@emotion/weak-memoize': 0.3.1
@@ -2653,8 +2550,8 @@ packages:
       react: 18.2.0
     dev: false
 
-  /@emotion/serialize@1.1.2:
-    resolution: {integrity: sha512-zR6a/fkFP4EAcCMQtLOhIgpprZOwNmCldtpaISpvz348+DP4Mz8ZoKaGGCQpbzepNIUWbq4w6hNZkwDyKoS+HA==}
+  /@emotion/serialize@1.1.3:
+    resolution: {integrity: sha512-iD4D6QVZFDhcbH0RAG1uVu1CwVLMWUkCvAqqlewO/rxf8+87yIBAlt4+AxMiiKPLs5hFc0owNk/sLLAOROw3cA==}
     dependencies:
       '@emotion/hash': 0.9.1
       '@emotion/memoize': 0.8.1
@@ -2667,7 +2564,7 @@ packages:
     resolution: {integrity: sha512-0QBtGvaqtWi+nx6doRwDdBIzhNdZrXUppvTM4dtZZWEGTXL/XE/yJxLMGlDT1Gt+UHH5IX1n+jkXyytE/av7OA==}
     dev: false
 
-  /@emotion/styled@11.11.0(@emotion/react@11.11.1)(react@18.2.0):
+  /@emotion/styled@11.11.0(@emotion/react@11.11.3)(react@18.2.0):
     resolution: {integrity: sha512-hM5Nnvu9P3midq5aaXj4I+lnSfNi7Pmd4EWk1fOZ3pxookaQTNew6bp4JaCBYM4HVFZF9g7UjJmsUmC2JlxOng==}
     peerDependencies:
       '@emotion/react': ^11.0.0-rc.0
@@ -2680,8 +2577,8 @@ packages:
       '@babel/runtime': 7.23.6
       '@emotion/babel-plugin': 11.11.0
       '@emotion/is-prop-valid': 1.2.1
-      '@emotion/react': 11.11.1(react@18.2.0)
-      '@emotion/serialize': 1.1.2
+      '@emotion/react': 11.11.3(react@18.2.0)
+      '@emotion/serialize': 1.1.3
       '@emotion/use-insertion-effect-with-fallbacks': 1.0.1(react@18.2.0)
       '@emotion/utils': 1.2.1
       react: 18.2.0
@@ -3357,11 +3254,7 @@ packages:
       tslib: 2.0.3
     dev: false
 
-<<<<<<< Updated upstream
-  /@graphql-tools/url-loader@6.10.1(@types/node@18.15.13)(graphql@15.8.0):
-=======
-  /@graphql-tools/url-loader@6.10.1(graphql@15.8.0):
->>>>>>> Stashed changes
+  /@graphql-tools/url-loader@6.10.1(@types/node@18.19.3)(graphql@15.8.0):
     resolution: {integrity: sha512-DSDrbhQIv7fheQ60pfDpGD256ixUQIR6Hhf9Z5bRjVkXOCvO5XrkwoWLiU7iHL81GB1r0Ba31bf+sl+D4nyyfw==}
     peerDependencies:
       graphql: ^14.0.0 || ^15.0.0
@@ -3380,11 +3273,7 @@ packages:
       is-promise: 4.0.0
       isomorphic-ws: 4.0.1(ws@7.4.5)
       lodash: 4.17.21
-<<<<<<< Updated upstream
-      meros: 1.1.4(@types/node@18.15.13)
-=======
-      meros: 1.1.4
->>>>>>> Stashed changes
+      meros: 1.1.4(@types/node@18.19.3)
       subscriptions-transport-ws: 0.9.19(graphql@15.8.0)
       sync-fetch: 0.3.0
       tslib: 2.2.0
@@ -3756,8 +3645,8 @@ packages:
   /@metamask/sdk-install-modal-web@0.3.3:
     resolution: {integrity: sha512-YxSDtvR6jMjpu5oyqGI6omk9Y2dvIsa0tNyTP7k1dKPRzcpP7ekj1xJ6c5vZS4FlxJ908QfEMPohy2pzE8UBpQ==}
     dependencies:
-      '@emotion/react': 11.11.1(react@18.2.0)
-      '@emotion/styled': 11.11.0(@emotion/react@11.11.1)(react@18.2.0)
+      '@emotion/react': 11.11.3(react@18.2.0)
+      '@emotion/styled': 11.11.0(@emotion/react@11.11.3)(react@18.2.0)
       qr-code-styling: 1.6.0-rc.1
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
@@ -3871,11 +3760,7 @@ packages:
     engines: {node: '>= 8'}
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
-<<<<<<< Updated upstream
-      fastq: 1.15.0
-=======
       fastq: 1.16.0
->>>>>>> Stashed changes
 
   /@npmcli/fs@1.1.1:
     resolution: {integrity: sha512-8KG5RD0GVP4ydEzRn/I4BNDuxDtqVbOdm8675T49OIG/NGhaK0pjPX7ZcDlvKYbA+ulvVK3ztfcF4uBdOxuJbQ==}
@@ -4029,7 +3914,7 @@ packages:
       pretty-bytes: 5.6.0
       semver: 7.5.4
       serve-static: 1.15.0
-      std-env: 3.6.0
+      std-env: 3.7.0
       upath: 2.0.1
       wrap-ansi: 7.0.0
     transitivePeerDependencies:
@@ -4064,7 +3949,7 @@ packages:
       dotenv: 16.3.1
       lodash: 4.17.21
       rc9: 2.1.1
-      std-env: 3.6.0
+      std-env: 3.7.0
       ufo: 1.3.2
     dev: false
 
@@ -4185,7 +4070,7 @@ packages:
       node-fetch: 2.7.0
       parse-git-config: 3.0.0
       rc9: 2.1.1
-      std-env: 3.6.0
+      std-env: 3.7.0
     transitivePeerDependencies:
       - encoding
     dev: false
@@ -4212,7 +4097,7 @@ packages:
     resolution: {integrity: sha512-5bgothZDKBG9p1DKTvI74DfJDk+3fdRbjT6JMmiciyV55IMm7bE6eGVpcnUJ8bGjuKWSOiJbjaGG4qZ18EMd8Q==}
     engines: {node: ^14.18.0 || >=16.10.0}
     dependencies:
-      node-fetch-native: 1.4.1
+      node-fetch-native: 1.5.1
       ufo: 1.3.2
       unfetch: 5.0.0
       vue: 2.7.15
@@ -4251,7 +4136,7 @@ packages:
       '@nuxt/utils': 2.17.2
       babel-loader: 8.3.0(@babel/core@7.23.6)(webpack@4.47.0)
       cache-loader: 4.1.0(webpack@4.47.0)
-      caniuse-lite: 1.0.30001570
+      caniuse-lite: 1.0.30001571
       consola: 3.2.3
       css-loader: 5.2.7(webpack@4.47.0)
       cssnano: 6.0.2(postcss@8.4.32)
@@ -4274,7 +4159,7 @@ packages:
       postcss-preset-env: 9.3.0(postcss@8.4.32)
       postcss-url: 10.1.3(postcss@8.4.32)
       semver: 7.5.4
-      std-env: 3.6.0
+      std-env: 3.7.0
       style-resources-loader: 1.5.0(webpack@4.47.0)
       terser-webpack-plugin: 4.2.3(webpack@4.47.0)
       thread-loader: 3.0.4(webpack@4.47.0)
@@ -4357,11 +4242,7 @@ packages:
       - whiskers
     dev: false
 
-<<<<<<< Updated upstream
-  /@nuxtjs/apollo@4.0.1-rc.5(@types/node@18.15.13)(@vue/cli-shared-utils@4.5.19)(apollo-cache-inmemory@1.6.6)(graphql-tag@2.12.6)(react-dom@16.14.0)(react@18.2.0)(typescript@4.9.5):
-=======
-  /@nuxtjs/apollo@4.0.1-rc.5(@vue/cli-shared-utils@4.5.19)(apollo-cache-inmemory@1.6.6)(graphql-tag@2.12.6)(react-dom@16.14.0)(react@18.2.0)(typescript@4.9.5):
->>>>>>> Stashed changes
+  /@nuxtjs/apollo@4.0.1-rc.5(@types/node@18.19.3)(@vue/cli-shared-utils@4.5.19)(apollo-cache-inmemory@1.6.6)(graphql-tag@2.12.6)(react-dom@16.14.0)(react@18.2.0)(typescript@4.9.5):
     resolution: {integrity: sha512-A5ITCdks87NND6t116nBFTqENiMfUYkFy+b8xDTRV4rz5NHhpYAfoDZDRKDnlszOBYOCvBjro/GDJH+KWW7siQ==}
     peerDependencies:
       apollo-cache-inmemory: ^1.6.6
@@ -4370,11 +4251,7 @@ packages:
       cross-fetch: 3.1.8
       universal-cookie: 4.0.4
       vue-apollo: 3.1.1(graphql-tag@2.12.6)
-<<<<<<< Updated upstream
-      vue-cli-plugin-apollo: 0.22.2(@types/node@18.15.13)(@vue/cli-shared-utils@4.5.19)(react-dom@16.14.0)(react@18.2.0)(typescript@4.9.5)
-=======
-      vue-cli-plugin-apollo: 0.22.2(@vue/cli-shared-utils@4.5.19)(react-dom@16.14.0)(react@18.2.0)(typescript@4.9.5)
->>>>>>> Stashed changes
+      vue-cli-plugin-apollo: 0.22.2(@types/node@18.19.3)(@vue/cli-shared-utils@4.5.19)(react-dom@16.14.0)(react@18.2.0)(typescript@4.9.5)
       webpack-node-externals: 2.5.2
     transitivePeerDependencies:
       - '@types/node'
@@ -4473,11 +4350,7 @@ packages:
     dependencies:
       deepmerge: 4.3.1
       sass: 1.32.13
-<<<<<<< Updated upstream
-      sass-loader: 10.5.0(sass@1.32.13)(webpack@4.47.0)
-=======
       sass-loader: 10.5.1(sass@1.32.13)(webpack@4.47.0)
->>>>>>> Stashed changes
       vuetify: 2.7.1(vue@2.7.15)
       vuetify-loader: 1.9.2(vue@2.7.15)(vuetify@2.7.1)(webpack@4.47.0)
     transitivePeerDependencies:
@@ -5175,7 +5048,7 @@ packages:
     resolution: {integrity: sha512-OaJ7XLaelTgrvlZD8/aa0vvvxZdUmlCn6MtWeB7TkiKW70BQLc9XEPpDLPdbo52ZhXUCrznlWdCHWxJWtdyajA==}
     dependencies:
       '@types/node': 20.10.5
-      '@types/qs': 6.9.10
+      '@types/qs': 6.9.11
       '@types/range-parser': 1.2.7
       '@types/send': 0.17.4
     dev: false
@@ -5185,7 +5058,7 @@ packages:
     dependencies:
       '@types/body-parser': 1.19.0
       '@types/express-serve-static-core': 4.17.41
-      '@types/qs': 6.9.10
+      '@types/qs': 6.9.11
       '@types/serve-static': 1.15.5
     dev: false
 
@@ -5316,10 +5189,13 @@ packages:
 
   /@types/node@18.15.13:
     resolution: {integrity: sha512-N+0kuo9KgrUQ1Sn/ifDXsvg0TTleP7rIy4zOBGECxAljqvqfqpTfzx0Q1NUedOixRMBfe2Whhb056a42cWs26Q==}
-<<<<<<< Updated upstream
-=======
     dev: false
->>>>>>> Stashed changes
+
+  /@types/node@18.19.3:
+    resolution: {integrity: sha512-k5fggr14DwAytoA/t8rPrIz++lXK7/DqckthCmoZOKNsEbJkId4Z//BqgApXBUGrGddrigYa1oqheo/7YmW4rg==}
+    requiresBuild: true
+    dependencies:
+      undici-types: 5.26.5
 
   /@types/node@20.10.5:
     resolution: {integrity: sha512-nNPsNE65wjMxEKI93yOP+NPGGBJz/PoN3kZsVLee0XMiJolxSekEVD8wRwBUBqkwc7UWop0edW50yrCQW4CyRw==}
@@ -5339,8 +5215,8 @@ packages:
       '@types/node': 20.10.5
     dev: false
 
-  /@types/qs@6.9.10:
-    resolution: {integrity: sha512-3Gnx08Ns1sEoCrWssEgTSJs/rsT2vhGP+Ja9cnnk9k4ALxinORlQneLXFeFKOTJMOeZUFD1s7w+w2AphTpvzZw==}
+  /@types/qs@6.9.11:
+    resolution: {integrity: sha512-oGk0gmhnEJK4Yyk+oI7EfXsLayXatCWPHary1MtcmbAifkobT9cM9yutG/hZKIseOU0MqbIwQ/u2nn/Gb+ltuQ==}
     dev: false
 
   /@types/range-parser@1.2.7:
@@ -5452,8 +5328,8 @@ packages:
   /@ungap/structured-clone@1.2.0:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
 
-  /@uniswap/sdk-core@4.0.9:
-    resolution: {integrity: sha512-/0K+u3ZWokpj9VyRuGwrwx7jy31auJdsw5UbKnvHqUSfejrp6XhmMPNOElPgL6jiUhAN1NhVHfjX01tNHFxeLA==}
+  /@uniswap/sdk-core@4.0.10:
+    resolution: {integrity: sha512-RiobXJKXvVVb+wfNM09Ik8djOMOuRQGfyRP5pHgUjojicK/7nscZILjZ87DjVCGjXEoD8yTSIps0UAQuz6pJIw==}
     engines: {node: '>=10'}
     dependencies:
       '@ethersproject/address': 5.7.0
@@ -5629,36 +5505,20 @@ packages:
       strip-ansi: 6.0.1
     dev: false
 
-<<<<<<< Updated upstream
-  /@vue/compiler-core@3.3.12:
-    resolution: {integrity: sha512-qAtjyG3GBLG0chzp5xGCyRLLe6wFCHmjI82aGzwuGKyznNP+GJJMxjc0wOYWDB2YKfho7niJFdoFpo0CZZQg9w==}
-    dependencies:
-      '@babel/parser': 7.23.6
-      '@vue/shared': 3.3.12
-=======
   /@vue/compiler-core@3.3.13:
     resolution: {integrity: sha512-bwi9HShGu7uaZLOErZgsH2+ojsEdsjerbf2cMXPwmvcgZfVPZ2BVZzCVnwZBxTAYd6Mzbmf6izcUNDkWnBBQ6A==}
     dependencies:
       '@babel/parser': 7.23.6
       '@vue/shared': 3.3.13
->>>>>>> Stashed changes
       estree-walker: 2.0.2
       source-map-js: 1.0.2
     dev: true
 
-<<<<<<< Updated upstream
-  /@vue/compiler-dom@3.3.12:
-    resolution: {integrity: sha512-RdJU9oEYaoPKUdGXCy0l+i4clesdDeLmbvRlszoc9iagsnBnMmQtYfCPVQ5BHB6o7K4SCucDdJM2Dh3oXB0D6g==}
-    dependencies:
-      '@vue/compiler-core': 3.3.12
-      '@vue/shared': 3.3.12
-=======
   /@vue/compiler-dom@3.3.13:
     resolution: {integrity: sha512-EYRDpbLadGtNL0Gph+HoKiYqXLqZ0xSSpR5Dvnu/Ep7ggaCbjRDIus1MMxTS2Qm0koXED4xSlvTZaTnI8cYAsw==}
     dependencies:
       '@vue/compiler-core': 3.3.13
       '@vue/shared': 3.3.13
->>>>>>> Stashed changes
     dev: true
 
   /@vue/compiler-sfc@2.7.15:
@@ -5737,8 +5597,8 @@ packages:
       - whiskers
     dev: false
 
-  /@vue/language-core@1.8.25(typescript@4.9.5):
-    resolution: {integrity: sha512-NJk/5DnAZlpvXX8BdWmHI45bWGLViUaS3R/RMrmFSvFMSbJKuEODpM4kR0F0Ofv5SFzCWuNiMhxameWpVdQsnA==}
+  /@vue/language-core@1.8.26(typescript@4.9.5):
+    resolution: {integrity: sha512-9cmza/Y2YTiOnKZ0Mi9zsNn7Irw+aKirP+5LLWVSNaL3fjKJjW1cD3HGBckasY2RuVh4YycvdA9/Q6EBpVd/7Q==}
     peerDependencies:
       typescript: '*'
     peerDependenciesMeta:
@@ -5747,13 +5607,8 @@ packages:
     dependencies:
       '@volar/language-core': 1.11.1
       '@volar/source-map': 1.11.1
-<<<<<<< Updated upstream
-      '@vue/compiler-dom': 3.3.12
-      '@vue/shared': 3.3.12
-=======
       '@vue/compiler-dom': 3.3.13
       '@vue/shared': 3.3.13
->>>>>>> Stashed changes
       computeds: 0.0.1
       minimatch: 9.0.3
       muggle-string: 0.3.1
@@ -5762,13 +5617,8 @@ packages:
       vue-template-compiler: 2.7.15
     dev: true
 
-<<<<<<< Updated upstream
-  /@vue/shared@3.3.12:
-    resolution: {integrity: sha512-6p0Yin0pclvnER7BLNOQuod9Z+cxSYh8pSh7CzHnWNjAIP6zrTlCdHRvSCb1aYEx6i3Q3kvfuWU7nG16CgG1ag==}
-=======
   /@vue/shared@3.3.13:
     resolution: {integrity: sha512-/zYUwiHD8j7gKx2argXEMCUXVST6q/21DFU0sTfNX0URJroCe3b1UF6vLJ3lQDfLNIiiRl2ONp7Nh5UVWS6QnA==}
->>>>>>> Stashed changes
     dev: true
 
   /@vuejs-community/vue-filter-numeric-format@1.1.0:
@@ -6248,10 +6098,6 @@ packages:
       json-schema-traverse: 1.0.0
       require-from-string: 2.0.2
       uri-js: 4.4.1
-<<<<<<< Updated upstream
-=======
-    dev: false
->>>>>>> Stashed changes
 
   /anser@1.4.10:
     resolution: {integrity: sha512-hCv9AqTQ8ycjpSd3upOJd7vFwW1JaoYQ7tpham03GJ1ca8/65rqn0RpaWpItOAd6ylW9wAw6luXYPJIyPFVOww==}
@@ -6273,10 +6119,6 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       type-fest: 0.21.3
-<<<<<<< Updated upstream
-=======
-    dev: false
->>>>>>> Stashed changes
 
   /ansi-fragments@0.2.1:
     resolution: {integrity: sha512-DykbNHxuXQwUDRv5ibc2b0x7uw7wmwOGLBUd5RmaQ5z8Lhx19vwvKV+FAsM5rEA6dEcHxX+/Ad5s9eF2k2bB+w==}
@@ -6369,8 +6211,8 @@ packages:
       normalize-path: 3.0.0
       picomatch: 2.3.1
 
-  /apexcharts@3.45.0:
-    resolution: {integrity: sha512-o+XI4ysvKtt+l+bGbk19s6Y2gFes/7LRLMAonDgcapz4frS0vzTfXiK77QcQc30TMwPiSN9Z8Tv+CBn57x63wg==}
+  /apexcharts@3.45.1:
+    resolution: {integrity: sha512-pPjj/SA6dfPvR/IKRZF0STdfBGpBh3WRt7K0DFuW9P8erypYkX17EHu3/molPRfo2zSiQwTVpshHC5ncysqfkA==}
     dependencies:
       '@yr/monotone-cubic-spline': 1.0.3
       svg.draggable.js: 2.2.2
@@ -7203,10 +7045,6 @@ packages:
   /at-least-node@1.0.0:
     resolution: {integrity: sha512-+q/t7Ekv1EDY2l6Gda6LLiX14rU9TV20Wa3ofeQmwPFZbOMo9DXrLbOjFaaclkXKWidIaopwAObQDqwWtGUjqg==}
     engines: {node: '>= 4.0.0'}
-<<<<<<< Updated upstream
-=======
-    dev: false
->>>>>>> Stashed changes
 
   /atob@2.1.2:
     resolution: {integrity: sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==}
@@ -7221,7 +7059,7 @@ packages:
       postcss: ^8.1.0
     dependencies:
       browserslist: 4.22.2
-      caniuse-lite: 1.0.30001570
+      caniuse-lite: 1.0.30001571
       fraction.js: 4.3.7
       normalize-range: 0.1.2
       picocolors: 1.0.0
@@ -7480,10 +7318,6 @@ packages:
       buffer: 5.7.1
       inherits: 2.0.4
       readable-stream: 3.6.2
-<<<<<<< Updated upstream
-=======
-    dev: false
->>>>>>> Stashed changes
 
   /blakejs@1.2.1:
     resolution: {integrity: sha512-QXUSXI3QVc/gJME0dBpXrag1kbzOqCjCX8/b54ntNyW6sjtoqxqRk3LTmXzaJoh71zMsDCjM+47jS7XiwN/+fQ==}
@@ -7671,12 +7505,8 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001570
-<<<<<<< Updated upstream
-      electron-to-chromium: 1.4.614
-=======
-      electron-to-chromium: 1.4.615
->>>>>>> Stashed changes
+      caniuse-lite: 1.0.30001571
+      electron-to-chromium: 1.4.616
       node-releases: 2.0.14
       update-browserslist-db: 1.0.13(browserslist@4.22.2)
     dev: false
@@ -7748,10 +7578,6 @@ packages:
     dependencies:
       base64-js: 1.5.1
       ieee754: 1.2.1
-<<<<<<< Updated upstream
-=======
-    dev: false
->>>>>>> Stashed changes
 
   /bufferutil@4.0.8:
     resolution: {integrity: sha512-4T53u4PdgsXqKaIctwF8ifXlRTTmEPJ8iEPWFdGZvcf7sbwYo6FKFEX9eNNAnzFZ7EzJAQ3CJeOtCRA4rDp7Pw==}
@@ -7894,14 +7720,11 @@ packages:
       responselike: 2.0.1
     dev: false
 
-<<<<<<< Updated upstream
   /cachedir@2.3.0:
     resolution: {integrity: sha512-A+Fezp4zxnit6FanDmv9EqXNAi3vt9DWp51/71UEhXukb7QUuvtv9344h91dyAxuTLoSYJFU299qzR3tzwPAhw==}
     engines: {node: '>=6'}
     dev: true
 
-=======
->>>>>>> Stashed changes
   /call-bind@1.0.5:
     resolution: {integrity: sha512-C3nQxfFZxFRVoJoGKKI8y3MOEo129NQ+FgQ08iye+Mk4zNZZGdjfs06bVTr+DBSlA66Q2VEcMki/cUCP4SercQ==}
     dependencies:
@@ -7975,13 +7798,13 @@ packages:
     resolution: {integrity: sha512-bsTwuIg/BZZK/vreVTYYbSWoe2F+71P7K5QGEX+pT250DZbfU1MQ5prOKpPR+LL6uWKK3KMwMCAS74QB3Um1uw==}
     dependencies:
       browserslist: 4.22.2
-      caniuse-lite: 1.0.30001570
+      caniuse-lite: 1.0.30001571
       lodash.memoize: 4.1.2
       lodash.uniq: 4.5.0
     dev: false
 
-  /caniuse-lite@1.0.30001570:
-    resolution: {integrity: sha512-+3e0ASu4sw1SWaoCtvPeyXp+5PsjigkSt8OXZbF9StH5pQWbxEjLAZE3n8Aup5udop1uRiKA7a4utUk/uoSpUw==}
+  /caniuse-lite@1.0.30001571:
+    resolution: {integrity: sha512-tYq/6MoXhdezDLFZuCO/TKboTzuQ/xR5cFdgXPfDtM7/kchBO3b4VWghE/OAi/DV7tTdhmLjZiZBZi1fA/GheQ==}
     dev: false
 
   /capability@0.2.5:
@@ -8057,10 +7880,6 @@ packages:
 
   /chardet@0.7.0:
     resolution: {integrity: sha512-mT8iDcrh03qDGRRmoA2hmBJnxpllMR+0/0qlzjqZES6NdiWDcZkCNAk4rPFZ9Q85r27unkiNNg8ZOiwZXBHwcA==}
-<<<<<<< Updated upstream
-=======
-    dev: false
->>>>>>> Stashed changes
 
   /checkpoint-store@1.1.0:
     resolution: {integrity: sha512-J/NdY2WvIx654cc6LWSq/IYFFCUf75fFTgwzFnmbqyORH4MwgiQCgswLLKBGzmsyTI5V7i5bp/So6sMbDWhedg==}
@@ -8198,10 +8017,6 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       restore-cursor: 3.1.0
-<<<<<<< Updated upstream
-=======
-    dev: false
->>>>>>> Stashed changes
 
   /cli-progress@3.12.0:
     resolution: {integrity: sha512-tRkV3HJ1ASwm19THiiLIXLO7Im7wlTuKnvkYaTkyoAPefqjNg7W7DHKUlGRxy9vxDvbyCYQkQozvptuMkGCg8A==}
@@ -8213,10 +8028,6 @@ packages:
   /cli-spinners@2.9.2:
     resolution: {integrity: sha512-ywqV+5MmyL4E7ybXgKys4DugZbX0FC6LnwrhjuykIjnK9k8OQacQ7axGKnjDXWNhns0xot3bZI5h55H8yo9cJg==}
     engines: {node: '>=6'}
-<<<<<<< Updated upstream
-=======
-    dev: false
->>>>>>> Stashed changes
 
   /cli-truncate@0.2.1:
     resolution: {integrity: sha512-f4r4yJnbT++qUPI9NR4XLDLq41gQ+uqnPItWG0F5ZkehuNiTTa3EY0S4AqTSUOeJ7/zU41oWPQSNkW5BqPL9bg==}
@@ -8261,10 +8072,6 @@ packages:
   /cli-width@3.0.0:
     resolution: {integrity: sha512-FxqpkPPwu1HjuN93Omfm4h8uIanXofW0RxVEW3k5RKx+mJJYSthzNhp32Kzxxy3YAEZ/Dc/EWN1vZRY0+kOhbw==}
     engines: {node: '>= 10'}
-<<<<<<< Updated upstream
-=======
-    dev: false
->>>>>>> Stashed changes
 
   /cliui@5.0.0:
     resolution: {integrity: sha512-PYeGSEmmHM6zvoef2w8TPzlrnNpXIjTipYK780YswmIP9vjxmd6Y2a3CB2Ks6/AU8NHjZugXvo8w3oWM2qnwXA==}
@@ -8309,10 +8116,6 @@ packages:
   /clone@1.0.4:
     resolution: {integrity: sha512-JQHZ2QMW6l3aH/j6xCqQThY/9OH4D/9ls34cgkUBiEeocRTU04tHfKPBsUK1PqZCUQM7GiA0IIXJSuXHI64Kbg==}
     engines: {node: '>=0.8'}
-<<<<<<< Updated upstream
-=======
-    dev: false
->>>>>>> Stashed changes
 
   /clone@2.1.2:
     resolution: {integrity: sha512-3Pe/CF1Nn94hyhIYpjtiLhdCoEoz0DqQ+988E9gmeEdQZlojxnOb74wctFyuwWQHzqyf9X7C7MG8juUpqBJT8w==}
@@ -8393,7 +8196,6 @@ packages:
     engines: {node: ^12.20.0 || >=14}
     dev: false
 
-<<<<<<< Updated upstream
   /commitizen@4.3.0(typescript@4.9.5):
     resolution: {integrity: sha512-H0iNtClNEhT0fotHvGV3E9tDejDeS04sN1veIebsKYGMuGscFaswRoYJKmT3eW85eIJAs0F28bG2+a/9wCOfPw==}
     engines: {node: '>= 12'}
@@ -8417,8 +8219,6 @@ packages:
       - typescript
     dev: true
 
-=======
->>>>>>> Stashed changes
   /common-tags@1.8.2:
     resolution: {integrity: sha512-gk/Z852D2Wtb//0I+kRFNKKE9dIIVirjoqPoA1wJU+XePVXZfGeBpk45+A1rKO4Q43prqWBNY/MiIeRLbPWUaA==}
     engines: {node: '>=4.0.0'}
@@ -8694,13 +8494,10 @@ packages:
     engines: {node: '>= 0.6'}
     dev: false
 
-<<<<<<< Updated upstream
   /conventional-commit-types@3.0.0:
     resolution: {integrity: sha512-SmmCYnOniSsAa9GqWOeLqc179lfr5TRu5b4QFDkbsrJ5TZjPJx85wtOr3zn+1dbeNiXDKGPbZ72IKbPhLXh/Lg==}
     dev: true
 
-=======
->>>>>>> Stashed changes
   /convert-source-map@1.9.0:
     resolution: {integrity: sha512-ASFBup0Mz1uyiIjANan1jzLQami9z1PoYSZCiiYW2FczPbenXc45FZdBZLzOT+r6+iciuEModtmCti+hjaAk0A==}
     dev: false
@@ -8789,8 +8586,7 @@ packages:
       vary: 1.1.2
     dev: false
 
-<<<<<<< Updated upstream
-  /cosmiconfig-typescript-loader@5.0.0(@types/node@18.15.13)(cosmiconfig@8.3.6)(typescript@4.9.5):
+  /cosmiconfig-typescript-loader@5.0.0(@types/node@18.19.3)(cosmiconfig@8.3.6)(typescript@4.9.5):
     resolution: {integrity: sha512-+8cK7jRAReYkMwMiG+bxhcNKiHJDM6bR9FD/nGBXOWdMLuYawjF5cGrtLilJ+LGd3ZjCXnJjR5DkfWPoIVlqJA==}
     engines: {node: '>=v16'}
     requiresBuild: true
@@ -8799,15 +8595,13 @@ packages:
       cosmiconfig: '>=8.2'
       typescript: '>=4'
     dependencies:
-      '@types/node': 18.15.13
+      '@types/node': 18.19.3
       cosmiconfig: 8.3.6(typescript@4.9.5)
       jiti: 1.21.0
       typescript: 4.9.5
     dev: true
     optional: true
 
-=======
->>>>>>> Stashed changes
   /cosmiconfig@5.2.1:
     resolution: {integrity: sha512-H65gsXo1SKjf8zmrJ67eJk8aIRKV5ff2D4uKZIBZShbhGSpEmsQOPW/SKMKYhSTrqR7ufy6RP69rPogdaPh/kA==}
     engines: {node: '>=4'}
@@ -8829,7 +8623,6 @@ packages:
       yaml: 1.10.2
     dev: false
 
-<<<<<<< Updated upstream
   /cosmiconfig@8.3.6(typescript@4.9.5):
     resolution: {integrity: sha512-kcZ6+W5QzcJ3P1Mt+83OUv/oHFqZHIx8DuxG6eZ5RGMERoLqp4BuGjhHLYGK+Kf5XVkQvqBSmAy/nGWN3qDgEA==}
     engines: {node: '>=14'}
@@ -8848,8 +8641,6 @@ packages:
     dev: true
     optional: true
 
-=======
->>>>>>> Stashed changes
   /cosmjs-types@0.8.0:
     resolution: {integrity: sha512-Q2Mj95Fl0PYMWEhA2LuGEIhipF7mQwd9gTQ85DdP9jjjopeoGaDxvmPa5nakNzsq7FnO1DMTatXTAx6bxMH7Lg==}
     dependencies:
@@ -9035,7 +8826,7 @@ packages:
       postcss: 8.4.32
       postcss-modules-extract-imports: 3.0.0(postcss@8.4.32)
       postcss-modules-local-by-default: 4.0.3(postcss@8.4.32)
-      postcss-modules-scope: 3.0.0(postcss@8.4.32)
+      postcss-modules-scope: 3.1.0(postcss@8.4.32)
       postcss-modules-values: 4.0.0(postcss@8.4.32)
       postcss-value-parser: 4.2.0
       schema-utils: 3.3.0
@@ -9263,7 +9054,6 @@ packages:
   /cyclist@1.0.2:
     resolution: {integrity: sha512-0sVXIohTfLqVIW3kb/0n6IiWF3Ifj5nm2XaSrLq2DI6fKIGa2fYAZdk917rUneaeLVpYfFcyXE2ft0fe3remsA==}
 
-<<<<<<< Updated upstream
   /cz-conventional-changelog@3.3.0(typescript@4.9.5):
     resolution: {integrity: sha512-U466fIzU5U22eES5lTNiNbZ+d8dfcHcssH4o7QsdWaCcRs/feIPCxKYSWkYBNs5mny7MvEfwpTLWjvbm94hecw==}
     engines: {node: '>= 10'}
@@ -9280,8 +9070,6 @@ packages:
       - typescript
     dev: true
 
-=======
->>>>>>> Stashed changes
   /d@1.0.1:
     resolution: {integrity: sha512-m62ShEObQ39CfralilEQRjH6oAMtNCV1xJyEx5LpRYUVN+EviphDgUc/F3hnYbADmkiNs67Y+3ylmlG7Lnu+FA==}
     dependencies:
@@ -9407,13 +9195,10 @@ packages:
       mimic-response: 3.1.0
     dev: false
 
-<<<<<<< Updated upstream
   /dedent@0.7.0:
     resolution: {integrity: sha512-Q6fKUPqnAHAyhiUgFU7BUzLiv0kd8saH9al7tnu5Q/okj6dnupxyTgFIBjVzJATdfIAm9NAsvXNzjaKa+bxVyA==}
     dev: true
 
-=======
->>>>>>> Stashed changes
   /deep-is@0.1.4:
     resolution: {integrity: sha512-oIPzksmTg4/MriiaYGO+okXDT7ztn/w3Eptv/+gSIdMdKsJo0u4CfYNFJPy+4SKMuCqGw2wxnA+URMg3t8a/bQ==}
 
@@ -9430,10 +9215,6 @@ packages:
     resolution: {integrity: sha512-eFuaLoy/Rxalv2kr+lqMlUnrDWV+3j4pljOIJgLIhI058IQfWJ7vXhyEIHu+HtC738klGALYxOKDO0bQP3tg8A==}
     dependencies:
       clone: 1.0.4
-<<<<<<< Updated upstream
-=======
-    dev: false
->>>>>>> Stashed changes
 
   /defer-to-connect@2.0.1:
     resolution: {integrity: sha512-4tvttepXG1VaYGrRibk5EwJd1t4udunSOVMdLSAL6mId1ix438oPwPZMALY41FCijukO1L0twNcGsdzS7dHgDg==}
@@ -9547,27 +9328,21 @@ packages:
     resolution: {integrity: sha512-53rsFbGdwMwlF7qvCt0ypLM5V5/Mbl0szB7GPN8y9NCcbknYOeVVXdrXEq+90IwAfrrzt6Hd+u2E2ntakICU8w==}
     dev: false
 
-<<<<<<< Updated upstream
   /detect-file@1.0.0:
     resolution: {integrity: sha512-DtCOLG98P007x7wiiOmfI0fi3eIKyWiLTGJ2MDnVi/E04lWGbf+JzrRHMm0rgIIZJGtHpKpbVgLWHrv8xXpc3Q==}
     engines: {node: '>=0.10.0'}
     dev: true
 
-=======
->>>>>>> Stashed changes
   /detect-indent@5.0.0:
     resolution: {integrity: sha512-rlpvsxUtM0PQvy9iZe640/IWwWYyBsTApREbA1pHOpmOUIl9MkP/U4z7vTtg4Oaojvqhxt7sdufnT0EzGaR31g==}
     engines: {node: '>=4'}
     dev: false
 
-<<<<<<< Updated upstream
   /detect-indent@6.1.0:
     resolution: {integrity: sha512-reYkTUJAZb9gUuZ2RvVCNhVHdg62RHnJ7WJl8ftMi4diZ6NWlciOzQN88pUhSELEwflJht4oQDv0F0BMlwaYtA==}
     engines: {node: '>=8'}
     dev: true
 
-=======
->>>>>>> Stashed changes
   /detect-node@2.1.0:
     resolution: {integrity: sha512-T0NIuQpnTvFDATNuHN5roPwSBG83rFsuO+MXXH9/3N1eFbn4wcPjttvjMLEPWJ0RGUYgQE7cGgS3tNxbqCGM7g==}
     dev: false
@@ -9754,13 +9529,8 @@ packages:
       jake: 10.8.7
     dev: false
 
-<<<<<<< Updated upstream
-  /electron-to-chromium@1.4.614:
-    resolution: {integrity: sha512-X4ze/9Sc3QWs6h92yerwqv7aB/uU8vCjZcrMjA8N9R1pjMFRe44dLsck5FzLilOYvcXuDn93B+bpGYyufc70gQ==}
-=======
-  /electron-to-chromium@1.4.615:
-    resolution: {integrity: sha512-/bKPPcgZVUziECqDc+0HkT87+0zhaWSZHNXqF8FLd2lQcptpmUFwoCSWjCdOng9Gdq+afKArPdEg/0ZW461Eng==}
->>>>>>> Stashed changes
+  /electron-to-chromium@1.4.616:
+    resolution: {integrity: sha512-1n7zWYh8eS0L9Uy+GskE0lkBUNK83cXTVJI0pU3mGprFsbfSdAc15VTFbo+A+Bq4pwstmL30AVcEU3Fo463lNg==}
     dev: false
 
   /elegant-spinner@1.0.1:
@@ -9789,10 +9559,6 @@ packages:
 
   /emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
-<<<<<<< Updated upstream
-=======
-    dev: false
->>>>>>> Stashed changes
 
   /emojis-list@3.0.0:
     resolution: {integrity: sha512-/kyM18EfinwXZbno9FyUGeFh87KC8HRQBQGildHZbEuRyWFOmv1U10o9BBp8XVZDVNNuQKyIGIu5ZYAAXJ0V2Q==}
@@ -10820,7 +10586,6 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-<<<<<<< Updated upstream
   /expand-tilde@2.0.2:
     resolution: {integrity: sha512-A5EmesHW6rfnZ9ysHQjPdJRni0SRar0tjtG5MNtm9n5TUvsYU8oozprtRD4AqHxcZWWlVuAmQo2nWKfN9oyjTw==}
     engines: {node: '>=0.10.0'}
@@ -10828,8 +10593,6 @@ packages:
       homedir-polyfill: 1.0.3
     dev: true
 
-=======
->>>>>>> Stashed changes
   /express@4.18.2:
     resolution: {integrity: sha512-5/PsL6iGPdfQ/lKM1UuielYgv3BUoJfz1aUwU9vHZ+J7gyvwdQXFEBIEIaxeGf0GIcreATNyBExtalisDbuMqQ==}
     engines: {node: '>= 0.10.0'}
@@ -10906,10 +10669,6 @@ packages:
       chardet: 0.7.0
       iconv-lite: 0.4.24
       tmp: 0.0.33
-<<<<<<< Updated upstream
-=======
-    dev: false
->>>>>>> Stashed changes
 
   /extglob@2.0.4:
     resolution: {integrity: sha512-Nmb6QXkELsuBr24CJSkilo6UHHgbekK5UiZgfE6UHD3Eb27YC6oD+bhcT+tJ6cl8dmsgdQxnWlcry8ksBIBLpw==}
@@ -11011,13 +10770,8 @@ packages:
     engines: {node: '>= 4.9.1'}
     dev: false
 
-<<<<<<< Updated upstream
-  /fastq@1.15.0:
-    resolution: {integrity: sha512-wBrocU2LCXXa+lWBt8RoIRD89Fi8OdABODa/kEnyeyjS5aZO5/GNvI5sEINADqP/h8M29UHTHUb53sUu5Ihqdw==}
-=======
   /fastq@1.16.0:
     resolution: {integrity: sha512-ifCoaXsDrsdkWTtiNJX5uzHDsrck5TzfKKDcuFFTIrrc/BS076qgEIfoIy1VeZqViznfKiysPYTh/QeHtnIsYA==}
->>>>>>> Stashed changes
     dependencies:
       reusify: 1.0.4
 
@@ -11069,10 +10823,6 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       escape-string-regexp: 1.0.5
-<<<<<<< Updated upstream
-=======
-    dev: false
->>>>>>> Stashed changes
 
   /file-entry-cache@6.0.1:
     resolution: {integrity: sha512-7Gps/XWymbLk2QLYK4NzpMOrYjMhdIxXuIvy2QBsLE6ljuodKvdkWs/cpyJJ3CVIVpH0Oi1Hvg1ovbMzLdFBBg==}
@@ -11168,7 +10918,6 @@ packages:
       pkg-dir: 4.2.0
     dev: false
 
-<<<<<<< Updated upstream
   /find-node-modules@2.1.3:
     resolution: {integrity: sha512-UC2I2+nx1ZuOBclWVNdcnbDR5dlrOdVb7xNjmT/lHE+LsgztWks3dG7boJ37yTS/venXw84B/mAW9uHVoC5QRg==}
     dependencies:
@@ -11178,11 +10927,6 @@ packages:
 
   /find-root@1.1.0:
     resolution: {integrity: sha512-NKfW6bec6GfKc0SGx1e07QZY9PE99u0Bft/0rzSD5k3sO/vwkVUpDUKVm5Gpp5Ue3YfShPFTX2070tDs5kB9Ng==}
-=======
-  /find-root@1.1.0:
-    resolution: {integrity: sha512-NKfW6bec6GfKc0SGx1e07QZY9PE99u0Bft/0rzSD5k3sO/vwkVUpDUKVm5Gpp5Ue3YfShPFTX2070tDs5kB9Ng==}
-    dev: false
->>>>>>> Stashed changes
 
   /find-up@3.0.0:
     resolution: {integrity: sha512-1yD6RmLI1XBfxugvORwlck6f75tYL+iR0jqwsOrOxMZyGYqUuDhJ0l4AXdO1iX/FTs9cBAMEk1gWSEx1kSbylg==}
@@ -11204,7 +10948,6 @@ packages:
       locate-path: 6.0.0
       path-exists: 4.0.0
 
-<<<<<<< Updated upstream
   /findup-sync@4.0.0:
     resolution: {integrity: sha512-6jvvn/12IC4quLBL1KNokxC7wWTvYncaVUYSoxWw7YykPLuRrnv4qdHcSOywOI5RpkOVGeQRtWM8/q+G6W6qfQ==}
     engines: {node: '>= 8'}
@@ -11215,8 +10958,6 @@ packages:
       resolve-dir: 1.0.1
     dev: true
 
-=======
->>>>>>> Stashed changes
   /flat-cache@3.2.0:
     resolution: {integrity: sha512-CYcENa+FtcUKLmhhqyctpclsq7QF38pKjZHsGNiSQF5r4FtoKDWabFDl3hzaEQMvT1LHEysw5twgLvpYYb4vbw==}
     engines: {node: ^10.12.0 || >=12.0.0}
@@ -11367,10 +11108,6 @@ packages:
       graceful-fs: 4.2.11
       jsonfile: 6.1.0
       universalify: 2.0.1
-<<<<<<< Updated upstream
-=======
-    dev: false
->>>>>>> Stashed changes
 
   /fs-memo@1.2.0:
     resolution: {integrity: sha512-YEexkCpL4j03jn5SxaMHqcO6IuWuqm8JFUYhyCep7Ao89JIYmB8xoKhK7zXXJ9cCaNXpyNH5L3QtAmoxjoHW2w==}
@@ -11649,7 +11386,6 @@ packages:
       serialize-error: 7.0.1
     dev: false
 
-<<<<<<< Updated upstream
   /global-dirs@0.1.1:
     resolution: {integrity: sha512-NknMLn7F2J7aflwFOlGdNIuCDpN3VGoSoB+aap3KABFWbHVn1TCgFC+np23J8W2BiZbjfEw3BFBycSMv1AFblg==}
     engines: {node: '>=4'}
@@ -11679,8 +11415,6 @@ packages:
       which: 1.3.1
     dev: true
 
-=======
->>>>>>> Stashed changes
   /global@4.4.0:
     resolution: {integrity: sha512-wv/LAoHdRE3BeTGz53FAamhGlPLhlssK45usmGFThIi4XqnBmjKQ16u+RNbP7WvigRZDxUsM0J3gcQ5yicaL0w==}
     dependencies:
@@ -11871,11 +11605,7 @@ packages:
       uuid: 3.4.0
     dev: false
 
-<<<<<<< Updated upstream
-  /graphql-tools@6.2.6(@types/node@18.15.13)(graphql@15.8.0)(react-dom@16.14.0)(react@18.2.0)(subscriptions-transport-ws@0.9.19):
-=======
-  /graphql-tools@6.2.6(graphql@15.8.0)(react-dom@16.14.0)(react@18.2.0)(subscriptions-transport-ws@0.9.19):
->>>>>>> Stashed changes
+  /graphql-tools@6.2.6(@types/node@18.19.3)(graphql@15.8.0)(react-dom@16.14.0)(react@18.2.0)(subscriptions-transport-ws@0.9.19):
     resolution: {integrity: sha512-OyhSvK5ALVVD6bFiWjAqv2+lRyvjIRfb6Br5Tkjrv++rxnXDodPH/zhMbDGRw+W3SD5ioGEEz84yO48iPiN7jA==}
     deprecated: |-
       This package has been deprecated and now it only exports makeExecutableSchema.
@@ -11904,11 +11634,7 @@ packages:
       '@graphql-tools/resolvers-composition': 6.5.18(graphql@15.8.0)
       '@graphql-tools/schema': 6.2.4(graphql@15.8.0)
       '@graphql-tools/stitch': 6.2.4(graphql@15.8.0)
-<<<<<<< Updated upstream
-      '@graphql-tools/url-loader': 6.10.1(@types/node@18.15.13)(graphql@15.8.0)
-=======
-      '@graphql-tools/url-loader': 6.10.1(graphql@15.8.0)
->>>>>>> Stashed changes
+      '@graphql-tools/url-loader': 6.10.1(@types/node@18.19.3)(graphql@15.8.0)
       '@graphql-tools/utils': 6.2.4(graphql@15.8.0)
       '@graphql-tools/wrap': 6.2.4(graphql@15.8.0)
       graphql: 15.8.0
@@ -12131,7 +11857,6 @@ packages:
       react-is: 16.13.1
     dev: false
 
-<<<<<<< Updated upstream
   /homedir-polyfill@1.0.3:
     resolution: {integrity: sha512-eSmmWE5bZTK2Nou4g0AI3zZ9rswp7GRKoKXS1BLUkvPviOqs4YTN1djQIqrXy9k5gEtdLPy86JjRwsNM9tnDcA==}
     engines: {node: '>=0.10.0'}
@@ -12139,8 +11864,6 @@ packages:
       parse-passwd: 1.0.0
     dev: true
 
-=======
->>>>>>> Stashed changes
   /hosted-git-info@2.8.9:
     resolution: {integrity: sha512-mxIDAb9Lsm6DoOJ7xH+5+X4y1LU/4Hi50L9C5sIswK3JzULS4bwk1FvjdBgvYR4bzT4tuUQiC15FE2f5HbLvYw==}
 
@@ -12336,10 +12059,6 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       safer-buffer: 2.1.2
-<<<<<<< Updated upstream
-=======
-    dev: false
->>>>>>> Stashed changes
 
   /icss-utils@5.1.0(postcss@8.4.32):
     resolution: {integrity: sha512-soFhflCVWLfRNOPU3iv5Z9VUdT44xFRbzjLsEzSr5AQmgqPMTHdU3PMT1Cf1ssx8fLNJDA1juftYl+PUcv3MqA==}
@@ -12442,10 +12161,6 @@ packages:
 
   /ini@1.3.8:
     resolution: {integrity: sha512-JV/yugV2uzW5iMRSiZAyDtQd+nxtUnjeLt0acNdw98kKLrvuRVyB80tsREOE7yvGVgalhZ6RNXCmEHkUKBKxew==}
-<<<<<<< Updated upstream
-=======
-    dev: false
->>>>>>> Stashed changes
 
   /inquirer@7.3.3:
     resolution: {integrity: sha512-JG3eIAj5V9CwcGvuOmoo6LB9kbAYT8HXffUl6memuszlwDC/qvFAJw49XJ5NROSFNPxp3iQg1GqkFhaY/CR0IA==}
@@ -12466,7 +12181,6 @@ packages:
       through: 2.3.8
     dev: false
 
-<<<<<<< Updated upstream
   /inquirer@8.2.5:
     resolution: {integrity: sha512-QAgPDQMEgrDssk1XiwwHoOGYF9BAbUcc1+j+FhEvaOt8/cKRqyLn0U5qA6F74fGhTMGxf92pOvPBeh29jQJDTQ==}
     engines: {node: '>=12.0.0'}
@@ -12488,8 +12202,6 @@ packages:
       wrap-ansi: 7.0.0
     dev: true
 
-=======
->>>>>>> Stashed changes
   /internal-slot@1.0.6:
     resolution: {integrity: sha512-Xj6dv+PsbtwyPpEflsejS+oIZxmMlV44zAhG479uYu89MsjcYOhCFnNyKrkJrihbsiasQyY0afoCl/9BLR65bg==}
     engines: {node: '>= 0.4'}
@@ -12541,6 +12253,7 @@ packages:
 
   /is-arrayish@0.2.1:
     resolution: {integrity: sha512-zz06S8t0ozoDXMG+ube26zeCTNXcKIPJZJi8hBrF4idCLms4CG9QtK7qBl1boi5ODzFpjswb5JPmHCbMpjaYzg==}
+    requiresBuild: true
 
   /is-bigint@1.0.4:
     resolution: {integrity: sha512-zB9CruMamjym81i2JZ3UMn54PKGsQzsJeo6xvN3HJJ4CAsQNB6iRutp2To77OfCNuoxspsIhzaPoO1zyCEhFOg==}
@@ -12658,10 +12371,6 @@ packages:
   /is-fullwidth-code-point@3.0.0:
     resolution: {integrity: sha512-zymm5+u+sCsSWyD9qNaejV3DFvhCKclKdizYaJUuHA83RLjb7nSuGnddCHGv0hk+KY7BMAlsWeK4Ueg6EV6XQg==}
     engines: {node: '>=8'}
-<<<<<<< Updated upstream
-=======
-    dev: false
->>>>>>> Stashed changes
 
   /is-function@1.0.2:
     resolution: {integrity: sha512-lw7DUp0aWXYg+CBCN+JKkcE0Q2RayZnSvnZBlwgxHBQhqt5pZNVy4Ri7H9GmmXkdu7LUthszM+Tor1u/2iBcpQ==}
@@ -12707,10 +12416,6 @@ packages:
   /is-interactive@1.0.0:
     resolution: {integrity: sha512-2HvIEKRoqS62guEC+qBjpvRubdX910WCMuJTZ+I9yvqKU2/12eSL549HMwtabb4oupdj2sMP50k+XJfB/8JE6w==}
     engines: {node: '>=8'}
-<<<<<<< Updated upstream
-=======
-    dev: false
->>>>>>> Stashed changes
 
   /is-negative-zero@2.0.2:
     resolution: {integrity: sha512-dqJvarLawXsFbNDeJW7zAz8ItJ9cd28YufuuFzh0G8pNHjJMnY08Dv7sYX2uF5UpQOwieAeOExEYAWWfu7ZZUA==}
@@ -12840,14 +12545,10 @@ packages:
   /is-unicode-supported@0.1.0:
     resolution: {integrity: sha512-knxG2q4UC3u8stRGyAVJCOdxFmv5DZiRcdlIaAQXAbSfJya+OhopNotLQrstBhququ4ZpuKbDc/8S6mgXgPFPw==}
     engines: {node: '>=10'}
-<<<<<<< Updated upstream
 
   /is-utf8@0.2.1:
     resolution: {integrity: sha512-rMYPYvCzsXywIsldgLaSoPlw5PfoB/ssr7hY4pLfcodrA5M/eArza1a9VmTiNIBNMjOGr1Ow9mTyU2o69U6U9Q==}
     dev: true
-=======
-    dev: false
->>>>>>> Stashed changes
 
   /is-weakref@1.0.2:
     resolution: {integrity: sha512-qctsuLZmIQ0+vSSMfoVvyFe2+GSEvnmZ2ezTup1SBse9+twCCeial6EEi3Nc2KFcf6+qz2FBPnjXsk8xhKSaPQ==}
@@ -13042,10 +12743,6 @@ packages:
   /jiti@1.21.0:
     resolution: {integrity: sha512-gFqAIbuKyyso/3G2qhiO2OM6shY6EPP/R0+mkDbyspxKazh8BXDC5FiFsUjlczgdNz/vfra0da2y+aHrusLG/Q==}
     hasBin: true
-<<<<<<< Updated upstream
-=======
-    dev: false
->>>>>>> Stashed changes
 
   /joi@17.11.0:
     resolution: {integrity: sha512-NgB+lZLNoqISVy1rZocE9PZI36bL/77ie924Ri43yEvi9GUUMPeyVIr8KdFTMUlby1p0PBYMk9spIxEUQYqrJQ==}
@@ -13161,6 +12858,7 @@ packages:
 
   /json-parse-even-better-errors@2.3.1:
     resolution: {integrity: sha512-xyFwyhro/JEof6Ghe2iz2NcXoj2sloNsWr/XsERDK/oiPCfaNhl5ONfp+jQdAZRQQ0IJWNzH9zIZF7li91kh2w==}
+    requiresBuild: true
 
   /json-rpc-engine@5.4.0:
     resolution: {integrity: sha512-rAffKbPoNDjuRnXkecTjnsE3xLLrb00rEkdgalINhaYVYIxDwWtvYBr9UFbhTvPB1B2qUOLoFd/cV6f4Q7mh7g==}
@@ -13195,10 +12893,7 @@ packages:
 
   /json-schema-traverse@1.0.0:
     resolution: {integrity: sha512-NM8/P9n3XjXhIZn1lLhkFaACTOURQXjWhV4BA/RnOv8xvgqtqpAX9IO4mRQxSx1Rlo4tqzeqb0sOlruaOy3dug==}
-<<<<<<< Updated upstream
-=======
-    dev: false
->>>>>>> Stashed changes
+    requiresBuild: true
 
   /json-schema@0.4.0:
     resolution: {integrity: sha512-es94M3nTIfsEPisRafak+HDLfHXnKBhV3vU5eqPcS3flIWqcxJWgXHXiey3YrpaNsanY5ei1VoYEbOzijuq9BA==}
@@ -13244,10 +12939,6 @@ packages:
       universalify: 2.0.1
     optionalDependencies:
       graceful-fs: 4.2.11
-<<<<<<< Updated upstream
-=======
-    dev: false
->>>>>>> Stashed changes
 
   /jsonify@0.0.1:
     resolution: {integrity: sha512-2/Ki0GcmuqSrgFyelQq9M05y7PS0mEwuIzrf3f1fPqkVDVRvZrPZtVSMHxdgo8Aq0sxAOb/cr2aqqA3LeWHVPg==}
@@ -13404,6 +13095,7 @@ packages:
 
   /lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
+    requiresBuild: true
 
   /listr-silent-renderer@1.1.1:
     resolution: {integrity: sha512-L26cIFm7/oZeSNVhWB6faeorXhMg4HNlb/dS/7jHhr708jxlXrtrBWo4YUxZQkc6dGoxEAe6J/D3juTRBUzjtA==}
@@ -13531,26 +13223,20 @@ packages:
     resolution: {integrity: sha512-AupTIzdLQxJS5wIYUQlgGyk2XRTfGXA+MCghDHqZk0pzUNYvd3EESS6dkChNauNYVIutcb0dfHw1ri9Q1yPV8Q==}
     dev: false
 
-<<<<<<< Updated upstream
   /lodash.isplainobject@4.0.6:
     resolution: {integrity: sha512-oSXzaWypCMHkPC3NvBEaPHf0KsA5mvPrOPgQWDsbg8n7orZ290M0BmC/jgRZ4vcJ6DTAhjrsSYgdsW/F+MFOBA==}
     requiresBuild: true
     dev: true
     optional: true
 
-=======
->>>>>>> Stashed changes
   /lodash.kebabcase@4.1.1:
     resolution: {integrity: sha512-N8XRTIMMqqDgSy4VLKPnJ/+hpGZN+PHQiJnSenYqPaVV/NCqEogTnAdZLQiGKhxX+JCs8waWq2t1XHWKOmlY8g==}
     dev: false
 
-<<<<<<< Updated upstream
   /lodash.map@4.6.0:
     resolution: {integrity: sha512-worNHGKLDetmcEYDvh2stPCrrQRkP20E4l0iIS7F8EvzMqBBi7ltvFN5m1HvTf1P7Jk1txKhvFcmYsCr8O2F1Q==}
     dev: true
 
-=======
->>>>>>> Stashed changes
   /lodash.memoize@4.1.2:
     resolution: {integrity: sha512-t7j+NzmgnQzTAYXcsHYLgimltOV1MXHtlOWf6GjL9Kj8GK5FInw5JotxvbOs+IvV1/Dzo04/fCGfLVs7aXb4Ag==}
     dev: false
@@ -13558,15 +13244,12 @@ packages:
   /lodash.merge@4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
 
-<<<<<<< Updated upstream
   /lodash.mergewith@4.6.2:
     resolution: {integrity: sha512-GK3g5RPZWTRSeLSpgP8Xhra+pnjBC56q9FZYe1d5RN3TJ35dbkGy3YqBSMbyCrlbi+CM9Z3Jk5yTL7RCsqboyQ==}
     requiresBuild: true
     dev: true
     optional: true
 
-=======
->>>>>>> Stashed changes
   /lodash.pickby@4.6.0:
     resolution: {integrity: sha512-AZV+GsS/6ckvPOVQPXSiFFacKvKB4kOQu6ynt9wz0F3LO4R9Ij4K1ddYsIytDpSgLz88JHd9P+oaLeej5/Sl7Q==}
     dev: false
@@ -13598,10 +13281,6 @@ packages:
 
   /lodash.uniq@4.5.0:
     resolution: {integrity: sha512-xfBaXQd9ryd9dlSDvnvI0lvxfLJlYAZzXomUYzLKtUeOQvOP5piqAWuGtrhWeqaXK9hhoM/iyJc5AV+XfsX3HQ==}
-<<<<<<< Updated upstream
-=======
-    dev: false
->>>>>>> Stashed changes
 
   /lodash.xorby@4.7.0:
     resolution: {integrity: sha512-gYiD6nvuQy0AEkMoUju+t4f4Rn18fjsLB/7x7YZFqtFT9kmegRLrj/uGEQVyVDy7otTmSrIMXNOk2wwuLcfHCQ==}
@@ -13630,10 +13309,6 @@ packages:
     dependencies:
       chalk: 4.1.2
       is-unicode-supported: 0.1.0
-<<<<<<< Updated upstream
-=======
-    dev: false
->>>>>>> Stashed changes
 
   /log-update@2.3.0:
     resolution: {integrity: sha512-vlP11XfFGyeNQlmEn9tJ66rEW1coA/79m5z6BCkudjbAGE83uhAcGYrBFwfs3AdLiLzGRusRPAbSPK9xZteCmg==}
@@ -13662,14 +13337,11 @@ packages:
     resolution: {integrity: sha512-XsP+KhQif4bjX1kbuSiySJFNAehNxgLb6hPRGJ9QsUr8ajHkuXGdrHmFUTUUXhDwVX2R5bY4JNZEwbUiMhV+MA==}
     dev: false
 
-<<<<<<< Updated upstream
   /longest@2.0.1:
     resolution: {integrity: sha512-Ajzxb8CM6WAnFjgiloPsI3bF+WCxcvhdIG3KNA2KN962+tdBsHcuQ4k4qX/EcS/2CRkcc0iAkR956Nib6aXU/Q==}
     engines: {node: '>=0.10.0'}
     dev: true
 
-=======
->>>>>>> Stashed changes
   /loose-envify@1.4.0:
     resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==}
     hasBin: true
@@ -13860,13 +13532,10 @@ packages:
     engines: {node: '>= 8'}
     dev: false
 
-<<<<<<< Updated upstream
   /merge@2.1.1:
     resolution: {integrity: sha512-jz+Cfrg9GWOZbQAnDQ4hlVnQky+341Yk5ru8bZSe6sIDTCIg8n9i/u7hSQGSVOF3C7lH6mGtqjkiT9G4wFLL0w==}
     dev: true
 
-=======
->>>>>>> Stashed changes
   /merkle-patricia-tree@2.3.2:
     resolution: {integrity: sha512-81PW5m8oz/pz3GvsAwbauj7Y00rqm81Tzad77tHBwU7pIAtN+TJnMSOJhxBKflSVYhptMMb9RskhqHqrSm1V+g==}
     dependencies:
@@ -13880,11 +13549,7 @@ packages:
       semaphore: 1.1.0
     dev: false
 
-<<<<<<< Updated upstream
-  /meros@1.1.4(@types/node@18.15.13):
-=======
-  /meros@1.1.4:
->>>>>>> Stashed changes
+  /meros@1.1.4(@types/node@18.19.3):
     resolution: {integrity: sha512-E9ZXfK9iQfG9s73ars9qvvvbSIkJZF5yOo9j4tcwM5tN8mUKfj/EKN5PzOr3ZH0y5wL7dLAHw3RVEfpQV9Q7VQ==}
     engines: {node: '>=12'}
     peerDependencies:
@@ -13892,11 +13557,8 @@ packages:
     peerDependenciesMeta:
       '@types/node':
         optional: true
-<<<<<<< Updated upstream
     dependencies:
-      '@types/node': 18.15.13
-=======
->>>>>>> Stashed changes
+      '@types/node': 18.19.3
     dev: false
 
   /methods@1.1.2:
@@ -14518,10 +14180,6 @@ packages:
   /mimic-fn@2.1.0:
     resolution: {integrity: sha512-OqbOk5oEQeAZ8WXWydlu9HJjz9WVdEIvamMCcXmuqUYjTknH/sqsWvhQ3vgwKFRR1HpjvNBKQ37nbJgYzGqGcg==}
     engines: {node: '>=6'}
-<<<<<<< Updated upstream
-=======
-    dev: false
->>>>>>> Stashed changes
 
   /mimic-response@1.0.1:
     resolution: {integrity: sha512-j5EctnkH7amfV/q5Hgmoal1g2QHFJRraOtmx0JpIqkxhBhI/lJSl1nMpQ45hVarwNETOoWEimndZ4QK0RHxuxQ==}
@@ -14575,13 +14233,10 @@ packages:
       brace-expansion: 2.0.1
     dev: true
 
-<<<<<<< Updated upstream
   /minimist@1.2.7:
     resolution: {integrity: sha512-bzfL1YUZsP41gmu/qjrEk0Q6i2ix/cVeAhbCbqH9u3zYutS1cLg00qhrD0M2MVdCcx4Sc0UpP2eBWo9rotpq6g==}
     dev: true
 
-=======
->>>>>>> Stashed changes
   /minimist@1.2.8:
     resolution: {integrity: sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==}
 
@@ -14710,13 +14365,8 @@ packages:
     engines: {node: '>=4'}
     dev: false
 
-<<<<<<< Updated upstream
-  /mrmime@1.0.1:
-    resolution: {integrity: sha512-hzzEagAgDyoU1Q6yg5uI+AorQgdvMCur3FcKf7NhMKWsaYg+RnbTyHRa/9IlLF9rf455MOCtcqqrQQ83pPP7Uw==}
-=======
   /mrmime@2.0.0:
     resolution: {integrity: sha512-eu38+hdgojoyq63s+yTpN4XMBdt5l8HhMhc4VKLO9KM5caLIBvUm4thi7fFaxyTmCKeNnXZ5pAlBwCUnhA09uw==}
->>>>>>> Stashed changes
     engines: {node: '>=10'}
     dev: false
 
@@ -14785,10 +14435,6 @@ packages:
 
   /mute-stream@0.0.8:
     resolution: {integrity: sha512-nnbWWOkoWyUsTjKrhgD0dcz22mdkSnpYqbEjIm2nhwhuxlSkpywJmBo8h0ZqJdkp73mb90SssHkN4rsRaBAfAA==}
-<<<<<<< Updated upstream
-=======
-    dev: false
->>>>>>> Stashed changes
 
   /nan@2.18.0:
     resolution: {integrity: sha512-W7tfG7vMOGtD30sHoZSSc/JVYiyDPEyQVso/Zz+/uQd0B0L46gtC+pHha5FFMRpil6fm/AoEcRWyOVi4+E/f8w==}
@@ -14896,8 +14542,8 @@ packages:
       minimatch: 3.1.2
     dev: false
 
-  /node-fetch-native@1.4.1:
-    resolution: {integrity: sha512-NsXBU0UgBxo2rQLOeWNZqS3fvflWePMECr8CoSWoSTqCqGbVVsvl9vZu1HfQicYN0g5piV9Gh8RTEvo/uP752w==}
+  /node-fetch-native@1.5.1:
+    resolution: {integrity: sha512-KNVu95aIrNzw7v1aKyVv/nC2kHUqNzgBnFuMTemhHnk7djEMtLjaJSDCB8h2VVgKL5s+NAcvBlZ2OIHLP0RC/Q==}
     dev: false
 
   /node-fetch@2.6.1:
@@ -15331,10 +14977,6 @@ packages:
     engines: {node: '>=6'}
     dependencies:
       mimic-fn: 2.1.0
-<<<<<<< Updated upstream
-=======
-    dev: false
->>>>>>> Stashed changes
 
   /open@6.4.0:
     resolution: {integrity: sha512-IFenVPgF70fSm1keSd2iDBIDIBZkroLeuffXq+wKTzTJlBpesFWojV9lb8mzOfaAzM1sr7HQHuO0vtV0zYekGg==}
@@ -15410,10 +15052,6 @@ packages:
       log-symbols: 4.1.0
       strip-ansi: 6.0.1
       wcwidth: 1.0.1
-<<<<<<< Updated upstream
-=======
-    dev: false
->>>>>>> Stashed changes
 
   /os-browserify@0.3.0:
     resolution: {integrity: sha512-gjcpUc3clBf9+210TRaDWbf+rZZZEshZ+DlXMRCeAjp0xhTrnQsKHypIy1J3d5hKdUzj69t708EHtU8P6bUn0A==}
@@ -15421,10 +15059,6 @@ packages:
   /os-tmpdir@1.0.2:
     resolution: {integrity: sha512-D2FR03Vir7FIu45XBY20mTb+/ZSWB00sjU9jdQXt83gDrI4Ztz5Fs7/yy74g2N5SVQY4xY1qDr4rNddwYRVX0g==}
     engines: {node: '>=0.10.0'}
-<<<<<<< Updated upstream
-=======
-    dev: false
->>>>>>> Stashed changes
 
   /p-cancelable@2.1.1:
     resolution: {integrity: sha512-BZOr3nRQHOntUjTrH8+Lh54smKHoHyur8We1V8DSMVrl5A2malOOwuJRnKRDjSnkoeBh4at6BwEnb5I7Jl31wg==}
@@ -15561,14 +15195,11 @@ packages:
       json-parse-even-better-errors: 2.3.1
       lines-and-columns: 1.2.4
 
-<<<<<<< Updated upstream
   /parse-passwd@1.0.0:
     resolution: {integrity: sha512-1Y1A//QUXEZK7YKz+rD9WydcE1+EuPr6ZBgKecAB8tmoW6UFv0NREVJe1p+jRxtThkcbbKkfwIbWJe/IeE6m2Q==}
     engines: {node: '>=0.10.0'}
     dev: true
 
-=======
->>>>>>> Stashed changes
   /parse-path@4.0.4:
     resolution: {integrity: sha512-Z2lWUis7jlmXC1jeOG9giRO2+FsuyNipeQ43HAjqAZjwSe3SEf+q/84FGPHoso3kyntbxa4c4i77t3m6fGf8cw==}
     dependencies:
@@ -15672,10 +15303,6 @@ packages:
   /path-type@4.0.0:
     resolution: {integrity: sha512-gDKb8aZMDeD/tZWs9P6+q0J9Mwkdl6xMV8TjnGP3qJVJ06bdMgkbBlLU8IdfOsIsFz2BW1rNVT3XuNEl8zPAvw==}
     engines: {node: '>=8'}
-<<<<<<< Updated upstream
-=======
-    dev: false
->>>>>>> Stashed changes
 
   /pbkdf2@3.1.2:
     resolution: {integrity: sha512-iuh7L6jA7JEGu2WxDwtQP1ddOpaJNC4KlDEFfdQajSGgGPNi4OyDc2R7QnbY2bR9QjBVGwgvTdNJZoE7RaxUMA==}
@@ -16277,8 +15904,8 @@ packages:
       postcss-value-parser: 4.2.0
     dev: false
 
-  /postcss-modules-scope@3.0.0(postcss@8.4.32):
-    resolution: {integrity: sha512-hncihwFA2yPath8oZ15PZqvWGkWf+XUfQgUGamS4LqoP1anQLOsOJw0vr7J7IwLpoY9fatA2qiGUGmuZL0Iqlg==}
+  /postcss-modules-scope@3.1.0(postcss@8.4.32):
+    resolution: {integrity: sha512-SaIbK8XW+MZbd0xHPf7kdfA/3eOt7vxJ72IRecn3EzuZVLr1r0orzf0MX/pN8m+NMDoo6X/SQd8oeKqGZd8PXg==}
     engines: {node: ^10 || ^12 || >= 14}
     peerDependencies:
       postcss: ^8.1.0
@@ -17555,10 +17182,7 @@ packages:
   /require-from-string@2.0.2:
     resolution: {integrity: sha512-Xf0nWe6RseziFMu+Ap9biiUbmplq6S9/p+7w7YXP/JBHhrUDDUhwa+vANyubuqfZWTveU//DYVGsDG7RKL/vEw==}
     engines: {node: '>=0.10.0'}
-<<<<<<< Updated upstream
-=======
-    dev: false
->>>>>>> Stashed changes
+    requiresBuild: true
 
   /require-main-filename@2.0.0:
     resolution: {integrity: sha512-NKN5kMDylKuldxYLSUfrbo5Tuzh4hd+2E8NPPX02mZtn1VuREQToYe/ZdlJy+J3uCpfaiGF05e7B8W0iXbQHmg==}
@@ -17572,7 +17196,6 @@ packages:
     resolution: {integrity: sha512-0a1F4l73/ZFZOakJnQ3FvkJ2+gSTQWz/r2KE5OdDY0TxPm5h4GkqkWWfM47T7HsbnOtcJVEF4epCVy6u7Q3K+g==}
     dev: false
 
-<<<<<<< Updated upstream
   /resolve-dir@1.0.1:
     resolution: {integrity: sha512-R7uiTjECzvOsWSfdM0QKFNBVFcK27aHOUwdvK53BcW8zqnGdYp0Fbj82cy54+2A4P2tFM22J5kRfe1R+lM/1yg==}
     engines: {node: '>=0.10.0'}
@@ -17581,8 +17204,6 @@ packages:
       global-modules: 1.0.0
     dev: true
 
-=======
->>>>>>> Stashed changes
   /resolve-from@3.0.0:
     resolution: {integrity: sha512-GnlH6vxLymXJNMBo7XP1fJIzBFbdYt49CuTwmB/6N53t+kMPRMFKz783LlQ4tv28XoQfMWinAJX6WCGf2IlaIw==}
     engines: {node: '>=4'}
@@ -17595,7 +17216,6 @@ packages:
   /resolve-from@5.0.0:
     resolution: {integrity: sha512-qYg9KP24dD5qka9J47d0aVky0N+b4fTU89LN9iDnjB5waksiC49rvMB0PrUJQGoTmH50XPiqOvAjDfaijGxYZw==}
     engines: {node: '>=8'}
-<<<<<<< Updated upstream
 
   /resolve-global@1.0.0:
     resolution: {integrity: sha512-zFa12V4OLtT5XUX/Q4VLvTfBf+Ok0SPc1FNGM/z9ctUdiU618qwKpWnd0CHs3+RqROfyEg/DhuHbMWYqcgljEw==}
@@ -17605,9 +17225,6 @@ packages:
       global-dirs: 0.1.1
     dev: true
     optional: true
-=======
-    dev: false
->>>>>>> Stashed changes
 
   /resolve-url@0.2.1:
     resolution: {integrity: sha512-ZuF55hVUQaaczgOIwqWzkEcEidmlD/xl44x1UZnhOXcYuFN2S6+rcxpG+C1N3So0wvNI3DmJICUFfu2SxhBmvg==}
@@ -17646,10 +17263,6 @@ packages:
     dependencies:
       onetime: 5.1.2
       signal-exit: 3.0.7
-<<<<<<< Updated upstream
-=======
-    dev: false
->>>>>>> Stashed changes
 
   /ret@0.1.15:
     resolution: {integrity: sha512-TTlYpa+OL+vMMNG24xSlQGEJ3B/RzEfUlLct7b5G/ytav+wPrplCpVMFuwzXbkecJrb6IYo1iFb0S9v37754mg==}
@@ -17721,10 +17334,6 @@ packages:
   /run-async@2.4.1:
     resolution: {integrity: sha512-tvVnVv01b8c1RrA6Ep7JkStj85Guv/YrMcwqYQnwjsAS2cTmmPGBBjAjpCW7RrSodNSoE2/qg9O4bceNvUuDgQ==}
     engines: {node: '>=0.12.0'}
-<<<<<<< Updated upstream
-=======
-    dev: false
->>>>>>> Stashed changes
 
   /run-parallel@1.2.0:
     resolution: {integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==}
@@ -17747,15 +17356,12 @@ packages:
       tslib: 1.14.1
     dev: false
 
-<<<<<<< Updated upstream
   /rxjs@7.8.1:
     resolution: {integrity: sha512-AA3TVj+0A2iuIoQkWEK/tqFjBq2j+6PO6Y0zJcvzLAFhEFIO3HL0vls9hWLncZbAAbK0mar7oZ4V079I/qPMxg==}
     dependencies:
       tslib: 2.6.2
     dev: true
 
-=======
->>>>>>> Stashed changes
   /sade@1.8.1:
     resolution: {integrity: sha512-xal3CZX1Xlo/k4ApwCFrHVACi9fBqJ7V+mwhBsuf/1IOKbBy098Fex+Wa/5QMubw09pSZ/u8EY8PWgevJsXp1A==}
     engines: {node: '>=6'}
@@ -17806,13 +17412,8 @@ packages:
   /safer-buffer@2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
 
-<<<<<<< Updated upstream
-  /sass-loader@10.5.0(sass@1.32.13)(webpack@4.47.0):
-    resolution: {integrity: sha512-VsU71W7VR6SChMJZUqtrfLeMSA8ns7QTHbnA7cfevtjb3c392mX93lr0Dmr4uU1ch5uIbEmfmHjdrDYcXXkQ7w==}
-=======
   /sass-loader@10.5.1(sass@1.32.13)(webpack@4.47.0):
     resolution: {integrity: sha512-P8BGIW6OxYLJWaWG8DROibc98Uw/B90oHPYOjPQ5/tF572OTTwkhxSxpaQzD5lYam36zQd0cxjh24b4rcdNIZQ==}
->>>>>>> Stashed changes
     engines: {node: '>= 10.13.0'}
     peerDependencies:
       fibers: '>= 3.1.0'
@@ -17999,13 +17600,10 @@ packages:
       type-fest: 0.13.1
     dev: false
 
-<<<<<<< Updated upstream
   /serialize-javascript@1.9.1:
     resolution: {integrity: sha512-0Vb/54WJ6k5v8sSWN09S0ora+Hnr+cX40r9F170nT+mSkaxltoE/7R3OrIdBSUv1OoiobH1QoWQbCnAO+e8J1A==}
     dev: true
 
-=======
->>>>>>> Stashed changes
   /serialize-javascript@4.0.0:
     resolution: {integrity: sha512-GaNA54380uFefWghODBWEGisLZFj00nS5ACs6yHa9nLqlLpVLO8ChDGeKRjZnV4Nh4n0Qi7nhYZD/9fCPzEqkw==}
     dependencies:
@@ -18167,10 +17765,6 @@ packages:
 
   /signal-exit@3.0.7:
     resolution: {integrity: sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==}
-<<<<<<< Updated upstream
-=======
-    dev: false
->>>>>>> Stashed changes
 
   /signal-exit@4.1.0:
     resolution: {integrity: sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw==}
@@ -18200,21 +17794,12 @@ packages:
       semver: 7.0.0
     dev: false
 
-<<<<<<< Updated upstream
-  /sirv@2.0.3:
-    resolution: {integrity: sha512-O9jm9BsID1P+0HOi81VpXPoDxYP374pkOLzACAoyUQ/3OUVndNpsz6wMnY2z+yOxzbllCKZrM+9QrWsv4THnyA==}
-    engines: {node: '>= 10'}
-    dependencies:
-      '@polka/url': 1.0.0-next.24
-      mrmime: 1.0.1
-=======
   /sirv@2.0.4:
     resolution: {integrity: sha512-94Bdh3cC2PKrbgSOUqTiGPWVZeSiXfKOVZNJniWoqrWrRkB1CJzBU3NEbiTsPcYy1lDsANA/THzS+9WBiy5nfQ==}
     engines: {node: '>= 10'}
     dependencies:
       '@polka/url': 1.0.0-next.24
       mrmime: 2.0.0
->>>>>>> Stashed changes
       totalist: 3.0.1
     dev: false
 
@@ -18478,8 +18063,8 @@ packages:
     engines: {node: '>= 0.8'}
     dev: false
 
-  /std-env@3.6.0:
-    resolution: {integrity: sha512-aFZ19IgVmhdB2uX599ve2kE6BIE3YMnQ6Gp6BURhW/oIzpXGKr878TQfAQZn1+i0Flcc/UKUy1gOlcfaUBCryg==}
+  /std-env@3.7.0:
+    resolution: {integrity: sha512-JPbdCEQLj1w5GilpiHAx3qJvFndqybBysA3qUOnznweH4QbNYUsW/ea8QzSrnh0vNsezMMw5bcVool8lM0gwzg==}
     dev: false
 
   /stream-browserify@2.0.2:
@@ -18554,10 +18139,6 @@ packages:
       emoji-regex: 8.0.0
       is-fullwidth-code-point: 3.0.0
       strip-ansi: 6.0.1
-<<<<<<< Updated upstream
-=======
-    dev: false
->>>>>>> Stashed changes
 
   /string.prototype.trim@1.2.8:
     resolution: {integrity: sha512-lfjY4HcixfQXOfaqCvcBuOIapyaroTXhbkfJN3gcB1OtyupngWK4sEET9Knd0cXd28kTUqu/kHoV4HKSJdnjiQ==}
@@ -18632,14 +18213,11 @@ packages:
     resolution: {integrity: sha512-vavAMRXOgBVNF6nyEEmL3DBK19iRpDcoIwW+swQ+CbGiu7lju6t+JklA1MHweoWtadgt4ISVUsXLyDq34ddcwA==}
     engines: {node: '>=4'}
 
-<<<<<<< Updated upstream
   /strip-bom@4.0.0:
     resolution: {integrity: sha512-3xurFv5tEgii33Zi8Jtp55wEIILR9eh34FAW00PZf+JnSsTmV/ioewSgQl97JHvgjoRGwPShsWm+IdrxB35d0w==}
     engines: {node: '>=8'}
     dev: true
 
-=======
->>>>>>> Stashed changes
   /strip-eof@1.0.0:
     resolution: {integrity: sha512-7FCwGGmx8mD5xQd3RPUvnSpUXHM3BWuzjtpD4TXsfcZ9EL4azvVVUscFYwD9nx8Kh+uCBC00XBtAykoMHwTh8Q==}
     engines: {node: '>=0.10.0'}
@@ -19102,10 +18680,6 @@ packages:
 
   /through@2.3.8:
     resolution: {integrity: sha512-w89qg7PI8wAdvX60bMDP+bFoD5Dvhm9oLheFp5O4a2QF0cSBGsBX4qZmadPMvVqlLJBBci+WqGGOAPvcDeNSVg==}
-<<<<<<< Updated upstream
-=======
-    dev: false
->>>>>>> Stashed changes
 
   /time-fix-plugin@2.0.7(webpack@4.47.0):
     resolution: {integrity: sha512-uVFet1LQToeUX0rTcSiYVYVoGuBpc8gP/2jnlUzuHMHe+gux6XLsNzxLUweabMwiUj5ejhoIMsUI55nVSEa/Vw==}
@@ -19139,10 +18713,6 @@ packages:
     engines: {node: '>=0.6.0'}
     dependencies:
       os-tmpdir: 1.0.2
-<<<<<<< Updated upstream
-=======
-    dev: false
->>>>>>> Stashed changes
 
   /tmpl@1.0.5:
     resolution: {integrity: sha512-3f0uOEAQwIqGuWW2MVzYg8fV/QNnc/IpuJNG837rLuczAaLVHslWHZQj4IGiEl5Hs3kkbhwL9Ab7Hrsmuj+Smw==}
@@ -19317,10 +18887,6 @@ packages:
 
   /tslib@2.6.2:
     resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}
-<<<<<<< Updated upstream
-=======
-    dev: false
->>>>>>> Stashed changes
 
   /tty-browserify@0.0.0:
     resolution: {integrity: sha512-JVa5ijo+j/sOoHGjw0sxw734b1LhBkQ3bvUGNdxnVXDCX81Yx7TFgnZygxrIIWn23hbfTaMYLwRmAxFyDuFmIw==}
@@ -19366,10 +18932,6 @@ packages:
   /type-fest@0.21.3:
     resolution: {integrity: sha512-t0rzBq87m3fVcduHDUFhKmyyX+9eo6WQjZvf51Ea/M0Q7+T374Jp1aUiyUl0GKxp8M/OETVHSDvmkyPgvX+X2w==}
     engines: {node: '>=10'}
-<<<<<<< Updated upstream
-=======
-    dev: false
->>>>>>> Stashed changes
 
   /type-fest@0.3.1:
     resolution: {integrity: sha512-cUGJnCdr4STbePCgqNFbpVNCepa+kAVohJs1sLhxzdH+gnEoOd8VhbYa7pD3zZYGiURWM2xzEII3fQcRizDkYQ==}
@@ -19484,7 +19046,6 @@ packages:
     resolution: {integrity: sha512-T9q82TJI9e/C1TAxYvfb16xO120tMVFZrGA3f9/P4424DNu6ypK103y0GPFVa17yotwSyZW5iYXgjYHkGrJW/g==}
     engines: {node: '>=0.8.0'}
     hasBin: true
-<<<<<<< Updated upstream
 
   /uglifyjs-webpack-plugin@2.2.0(webpack@4.47.0):
     resolution: {integrity: sha512-mHSkufBmBuJ+KHQhv5H0MXijtsoA1lynJt1lXOaotja8/I0pR4L9oGaPIZw+bQBOFittXZg9OC1sXSGO9D9ZYg==}
@@ -19503,9 +19064,6 @@ packages:
       webpack-sources: 1.4.3
       worker-farm: 1.7.0
     dev: true
-=======
-    dev: false
->>>>>>> Stashed changes
 
   /ultron@1.1.1:
     resolution: {integrity: sha512-UIEXBNeYmKptWH6z8ZnqTeS8fV74zG0/eRU9VGkpzz+LIJNs8W/zM/L+7ctCkRrgbNnnR0xxw4bKOr0cW0N0Og==}
@@ -19587,10 +19145,6 @@ packages:
   /universalify@2.0.1:
     resolution: {integrity: sha512-gptHNQghINnc/vTGIk0SOFGFNXw7JVrlRUtConJRlvaw6DuX0wO5Jeko9sWrMBhh+PsYAZ7oXAiOnf/UKogyiw==}
     engines: {node: '>= 10.0.0'}
-<<<<<<< Updated upstream
-=======
-    dev: false
->>>>>>> Stashed changes
 
   /unixify@1.0.0:
     resolution: {integrity: sha512-6bc58dPYhCMHHuwxldQxO3RRNZ4eCogZ/st++0+fcC1nr0jiGUtAdBJ2qzmLQWSxbtz42pWt4QQMiZ9HvZf5cg==}
@@ -19894,12 +19448,12 @@ packages:
       - supports-color
     dev: false
 
-  /vue-apexcharts@1.6.2(apexcharts@3.45.0):
+  /vue-apexcharts@1.6.2(apexcharts@3.45.1):
     resolution: {integrity: sha512-9HS3scJwWgKjmkcWIf+ndNDR0WytUJD8Ju0V2ZYcjYtlTLwJAf2SKUlBZaQTkDmwje/zMgulvZRi+MXmi+WkKw==}
     peerDependencies:
       apexcharts: ^3.26.0
     dependencies:
-      apexcharts: 3.45.0
+      apexcharts: 3.45.1
     dev: false
 
   /vue-apollo@3.1.1(graphql-tag@2.12.6):
@@ -19919,11 +19473,7 @@ packages:
       vue: 2.7.15
     dev: false
 
-<<<<<<< Updated upstream
-  /vue-cli-plugin-apollo@0.22.2(@types/node@18.15.13)(@vue/cli-shared-utils@4.5.19)(react-dom@16.14.0)(react@18.2.0)(typescript@4.9.5):
-=======
-  /vue-cli-plugin-apollo@0.22.2(@vue/cli-shared-utils@4.5.19)(react-dom@16.14.0)(react@18.2.0)(typescript@4.9.5):
->>>>>>> Stashed changes
+  /vue-cli-plugin-apollo@0.22.2(@types/node@18.19.3)(@vue/cli-shared-utils@4.5.19)(react-dom@16.14.0)(react@18.2.0)(typescript@4.9.5):
     resolution: {integrity: sha512-HatlgKTChTnaSFTU2rdYDlL6Ui8t8Lzl9aqWiEd4vpbylZA/OlMFSbuNH33UoIgyJl783yo1WFod7FqNTj2zsg==}
     peerDependencies:
       '@vue/cli-shared-utils': ^3.0.0 || ^4.0.0-0
@@ -19955,11 +19505,7 @@ packages:
       graphql: 15.8.0
       graphql-subscriptions: 1.2.1(graphql@15.8.0)
       graphql-tag: 2.12.6(graphql@15.8.0)
-<<<<<<< Updated upstream
-      graphql-tools: 6.2.6(@types/node@18.15.13)(graphql@15.8.0)(react-dom@16.14.0)(react@18.2.0)(subscriptions-transport-ws@0.9.19)
-=======
-      graphql-tools: 6.2.6(graphql@15.8.0)(react-dom@16.14.0)(react@18.2.0)(subscriptions-transport-ws@0.9.19)
->>>>>>> Stashed changes
+      graphql-tools: 6.2.6(@types/node@18.19.3)(graphql@15.8.0)(react-dom@16.14.0)(react@18.2.0)(subscriptions-transport-ws@0.9.19)
       node-fetch: 2.7.0
       nodemon: 2.0.22
       subscriptions-transport-ws: 0.9.19(graphql@16.8.1)
@@ -20183,14 +19729,14 @@ packages:
     resolution: {integrity: sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==}
     dev: false
 
-  /vue-tsc@1.8.25(typescript@4.9.5):
-    resolution: {integrity: sha512-lHsRhDc/Y7LINvYhZ3pv4elflFADoEOo67vfClAfF2heVHpHmVquLSjojgCSIwzA4F0Pc4vowT/psXCYcfk+iQ==}
+  /vue-tsc@1.8.26(typescript@4.9.5):
+    resolution: {integrity: sha512-jMEJ4aqU/l1hdgmeExH5h1TFoN+hbho0A2ZAhHy53/947DGm7Qj/bpB85VpECOCwV00h7JYNVnvoD2ceOorB4Q==}
     hasBin: true
     peerDependencies:
       typescript: '*'
     dependencies:
       '@volar/typescript': 1.11.1
-      '@vue/language-core': 1.8.25(typescript@4.9.5)
+      '@vue/language-core': 1.8.26(typescript@4.9.5)
       semver: 7.5.4
       typescript: 4.9.5
     dev: true
@@ -20295,10 +19841,6 @@ packages:
     resolution: {integrity: sha512-XHPEwS0q6TaxcvG85+8EYkbiCux2XtWG2mkc47Ng2A77BQu9+DqIOJldST4HgPkuea7dvKSj5VgX3P1d4rW8Tg==}
     dependencies:
       defaults: 1.0.4
-<<<<<<< Updated upstream
-=======
-    dev: false
->>>>>>> Stashed changes
 
   /web3-bzz@1.10.3:
     resolution: {integrity: sha512-XDIRsTwekdBXtFytMpHBuun4cK4x0ZMIDXSoo1UVYp+oMyZj07c7gf7tNQY5qZ/sN+CJIas4ilhN25VJcjSijQ==}
@@ -20656,11 +20198,7 @@ packages:
       is-plain-object: 5.0.0
       opener: 1.5.2
       picocolors: 1.0.0
-<<<<<<< Updated upstream
-      sirv: 2.0.3
-=======
       sirv: 2.0.4
->>>>>>> Stashed changes
       ws: 7.5.9
     transitivePeerDependencies:
       - bufferutil
@@ -20752,7 +20290,7 @@ packages:
       chalk: 4.1.2
       consola: 2.15.3
       pretty-time: 1.1.0
-      std-env: 3.6.0
+      std-env: 3.7.0
       webpack: 4.47.0
     dev: false
 
@@ -20813,10 +20351,6 @@ packages:
     hasBin: true
     dependencies:
       isexe: 2.0.0
-<<<<<<< Updated upstream
-=======
-    dev: false
->>>>>>> Stashed changes
 
   /which@2.0.2:
     resolution: {integrity: sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==}
@@ -20832,14 +20366,11 @@ packages:
       string-width: 4.2.3
     dev: false
 
-<<<<<<< Updated upstream
   /word-wrap@1.2.5:
     resolution: {integrity: sha512-BN22B5eaMMI9UMtjrGd5g5eCYPpCPDUy0FJXbYsaT5zYxjFOckS53SQDE3pWkVoWpHXVb3BrYcEN4Twa55B5cA==}
     engines: {node: '>=0.10.0'}
     dev: true
 
-=======
->>>>>>> Stashed changes
   /worker-farm@1.7.0:
     resolution: {integrity: sha512-rvw3QTZc8lAxyVrqcSGVm5yP/IJ2UcB3U0graE3LCFoZ0Yn2x4EoVSqJKdB/T5M+FLcRPjz4TDacRf3OCfNUzw==}
     dependencies:
@@ -20878,10 +20409,6 @@ packages:
       ansi-styles: 4.3.0
       string-width: 4.2.3
       strip-ansi: 6.0.1
-<<<<<<< Updated upstream
-=======
-    dev: false
->>>>>>> Stashed changes
 
   /wrappy@1.0.2:
     resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
@@ -21252,7 +20779,7 @@ packages:
     dependencies:
       '@ethersproject/address': 5.7.0
       '@ethersproject/solidity': 5.7.0
-      '@uniswap/sdk-core': 4.0.9
+      '@uniswap/sdk-core': 4.0.10
       tiny-invariant: 1.3.1
       tiny-warning: 1.0.3
     dev: false
