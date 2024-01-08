@@ -52,11 +52,11 @@ export default {
           linkText: "Test Prototype",
           link: "https://yexlabs.vercel.app/swap"
         },
-        {
-          img: require("@/assets/sources/icons/ball-icon.svg"),
-          title: "Low Slippage, Zero Sandwich Attach Batch-A2MM ",
-          desc: "We care about your trading experience, and give you the most fair price for trading. The Batch-A2MMprotocol will be released on V3.",
-        },
+        // {
+        //   img: require("@/assets/sources/icons/ball-icon.svg"),
+        //   title: "Low Slippage, Zero Sandwich Attach Batch-A2MM ",
+        //   desc: "We care about your trading experience, and give you the most fair price for trading. The Batch-A2MMprotocol will be released on V3.",
+        // },
       ],
     }
   },

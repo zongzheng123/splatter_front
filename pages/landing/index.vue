@@ -89,12 +89,12 @@ export default {
           img: require("@/assets/sources/images/bg-xswap.svg"),
           to: "/landing/xswap",
         },
-        {
-          title: "XStarter",
-          desc: "Launching your Individual Sovereign Tokens with splatter protocol.",
-          img: require("@/assets/sources/images/bg-xstarter.svg"),
-          to: "/landing/xstarter",
-        },
+        // {
+        //   title: "XStarter",
+        //   desc: "Launching your Individual Sovereign Tokens with splatter protocol.",
+        //   img: require("@/assets/sources/images/bg-xstarter.svg"),
+        //   to: "/landing/xstarter",
+        // },
         {
           title: "XDAO",
           desc: "A Community-run DAO with built-in trust layer to improve Ethereum Scalability.",

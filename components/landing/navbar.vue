@@ -109,13 +109,13 @@ export default {
         {
           name: "Dapps",
           children: [
-            {
-              name: "XStarter",
-              // desc: "Description of product",
-              icon: require("@/assets/sources/icons/ball-icon.svg"),
-              iconSize: "20px",
-              to: "/landing/xstarter",
-            },
+            // {
+            //   name: "XStarter",
+            //   // desc: "Description of product",
+            //   icon: require("@/assets/sources/icons/ball-icon.svg"),
+            //   iconSize: "20px",
+            //   to: "/landing/xstarter",
+            // },
             {
               name: "XDao",
               // desc: "Description of product",

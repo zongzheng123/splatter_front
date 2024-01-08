@@ -43,10 +43,10 @@ export default {
           name: "XSwap",
           to: "/landing/xswap",
         },
-        {
-          name: "XStarter",
-          to: "/landing/xstarter",
-        },
+        // {
+        //   name: "XStarter",
+        //   to: "/landing/xstarter",
+        // },
         {
           name: "XDao",
           commingSoon: true,
