@@ -128,12 +128,14 @@
 
 <script>
 // import isMobile from '~/mixins/isMobile'
+import BigNumber from 'bignumber.js';
 import IUniswapV2Pair from '@uniswap/v2-core/build/IUniswapV2Pair.json'
 import routerV2ABI  from '~/static/abis/routerv2.json'
 import factoryABI  from '~/static/abis/factory.json'
 import ERC20ABI from '~/static/abis/erc20.json'
 import scrollTokens from '~/static/tokens/scroll_tokens.json'
 import scrollSepoliaTokens from '~/static/tokens/scroll_alpha_tokens.json'
+
 const Web3 = require('web3')
 const web3 = new Web3(window.ethereum);
 let routerV2Address = "0x2f2f7197d19A13e8c72c1087dD29d555aBE76C5C"
@@ -145,6 +147,7 @@ export default {
   name: "SwapPage",
   data() {
     return {
+      firstLoad: true,
       selectedItem1: null,
       selectedItem2: null,
       tokenInAmountUser: 0,
@@ -191,6 +194,7 @@ export default {
     }
   },
   async mounted() {
+    this.firstLoad = false
     await this.$metamask.checkConnection()
     this.styles()
 
@@ -289,8 +293,13 @@ export default {
     async approve(tokenAddres, amount) {
       try {
         const tokenInContract = new web3.eth.Contract(ERC20ABI, tokenAddres);
+      const approved = await tokenInContract.methods.allowance(this.$metamask.userAccount, routerV2Address).call()
+      if (new BigNumber(approved).isGreaterThanOrEqualTo(amount)) {
+        return
+      }
       await tokenInContract.methods.approve(routerV2Address, amount).send({ from: this.$metamask.userAccount })
       } catch (error) {
+        console.error(error)
       }
     },
 
@@ -410,7 +419,7 @@ export default {
         const gasLimit = await myMethod.estimateGas({ from: this.$metamask.userAccount }) + 5000
         await myMethod.send({from: this.$metamask.userAccount, gasLimit})
       } catch (error) {
-          console.log(error)
+          console.error(error)
           const errorJSON = JSON.parse(error.toString().split("Internal JSON-RPC error.")[1])
           this.$alert('cancel', errorJSON.message)
       }
