@@ -2,7 +2,7 @@
   <v-dialog v-model="modalConnect" content-class="modal-connect divcol relative isolate">
     <aside class="space">
       <span class="h8_em">Connect Wallet</span>
-      
+
       <v-btn style="background: hsl(0 0% 0% / .2)!important;" icon @click="modalConnect = false">
         <v-icon size="1.5em">mdi-close</v-icon>
       </v-btn>
@@ -11,7 +11,7 @@
     <v-sheet class="grid" color="transparent">
       <v-btn plain @click="connectMetamask(), $store.commit('signIn')">
         <img src="~/assets/sources/logos/metamask-icon.svg" alt="metamask logo">
-        
+
         <div class="divcol astart" style="gap: 5px">
           <span class="h12_em bold">metamask</span>
           <span class="h13_em">metamask.org</span>
@@ -20,7 +20,7 @@
 
       <!-- <v-btn plain @click="$store.commit('signIn')">
         <img src="~/assets/sources/logos/sender-icon.svg" alt="near">
-        
+
         <div class="divcol astart" style="gap: 5px">
           <span class="h12_em bold">connect</span>
           <span class="h13_em">connect.org</span>
@@ -45,7 +45,7 @@ export default {
       // console.log(this.$metamask.userAccount)
        if (this.$metamask.detectMetamask()) {
         alert("Please install metamask wallet");
-      } 
+      }
       await this.$metamask.connect().then(() => {
           // Refresh the site after a successful login
           this.modalConnect = false
@@ -71,7 +71,7 @@ export default {
   --p: 30px;
   --tt: capitalize;
   gap: 20px;
-  
+
   &::before {
     content: "";
     position: absolute;

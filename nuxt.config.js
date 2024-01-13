@@ -216,14 +216,13 @@ export default {
   vue: {
     config: {
       productionTip: false,
-      devtools: true
     }
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     publicPath: development ? '/splatter/' : '/',
-    // devtools: development,
+    devtools: development,
     // TODO: read about this to fix it.
     // plugins: [
     //   new webpack.ProvidePlugin({

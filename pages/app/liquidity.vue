@@ -45,7 +45,7 @@
                     solo
                     class="input"
                     placeholder="-.--"
-                    :rules="[rules, numberRule, requiredRule, balanceRule]"
+                    :rules="[numberRule, requiredRule, balanceRule]"
                     @input="calculateTokenAmount(1)"
                     ></v-text-field>
                     <p class="p light-span">Balance: {{balanceToken1 | numericFormat(numericFormatConfig)}}</p>
@@ -85,7 +85,7 @@
                     solo
                     class="input"
                     placeholder="-.--"
-                    :rules="[rules, numberRule, requiredRule]"
+                    :rules="[numberRule, requiredRule]"
                     @input="calculateTokenAmount(2)"
                     ></v-text-field>
                     <p class="p light-span">Balance: {{balanceToken2 | numericFormat(numericFormatConfig)}}</p>
@@ -109,7 +109,7 @@
               </div>
 
 
-              <v-btn class="btn btn-add mb-4 mt-4" :disabled="!pairExist" @click="submitForm">Add</v-btn>
+              <v-btn class="btn btn-add mb-4 mt-4" :disabled="!pairExist" :loading="submitLoading" @click="submitForm">Add</v-btn>
             </v-window-item>
 
             <v-window-item :value="2" class="window-2 divcol acenter">
@@ -204,6 +204,7 @@
 </template>
 
 <script>
+import BigNumber from 'bignumber.js'
 import IUniswapV2Pair from '@uniswap/v2-core/build/IUniswapV2Pair.json'
 import routerV2ABI from '~/static/abis/routerv2.json'
 import factoryABI from '~/static/abis/factory.json'
@@ -223,6 +224,7 @@ export default {
   name: "LiquidityPage",
   data() {
     return {
+      submitLoading: false,
       firstLoad: true,
       lengthPairs: null,
       windowStep: 1,
@@ -317,31 +319,41 @@ export default {
   },
   methods: {
     balanceRule() {
+      if (this.firstLoad) {
+        return true
+      }
       if (this.amountToken1 > this.balanceToken1 && this.selectedItem1) {
         this.$alert('info', `Insufficient ${this.selectedItem1?.symbol} balance`)
-        return this.tokenAmountIn <= this.tokenInAmountUser || ''
+        return false
       }
       if (this.amountToken2 > this.balanceToken2 && this.selectedItem2) {
         this.$alert('info', `Insufficient ${this.selectedItem1?.symbol} balance`)
-        return this.tokenAmountIn <= this.tokenInAmountUser || ''
+        return false
       }
+      return true
     },
     requiredRule(value) {
-      if(!value && !this.firstLoad) {
+      if (this.firstLoad) {
+         return true
+      }
+      if(!value) {
         this.$alert('info', 'This field is required')
       }
-      return !!value || ''
+      return !!value
     },
     numberRule(v) {
+      if (this.firstLoad) {
+         return true
+      }
       const regex = /^\d+(\.\d+)?$/
-      if( !regex.test(v)  && !this.firstLoad) {
+      if( !regex.test(v)) {
         this.$alert('info', 'Invalid numeric input')
       }
-      if(v < 0) {
+      if(v <= 0) {
         this.$alert('info', 'Value must be positive')
-
+        return false
       }
-      return regex.test(v) || ''
+      return regex.test(v)
     },
     selectPair(pair) {
       this.selectedItemRemove1 = pair.token0
@@ -352,14 +364,17 @@ export default {
       this.percent = value
     },
 
-    submitForm() {
+    async submitForm() {
      if (this.$refs.form.validate()){
-      this.addLiquidity(
+      this.submitLoading = true
+      await this.addLiquidity(
         this.selectedItem1,
         this.selectedItem2,
         this.amountToken1,
         this.amountToken2
       )
+      this.allPairs = await this.getAllPairs()
+      this.submitLoading = false
      }
     },
 
@@ -442,6 +457,10 @@ export default {
 
     async approve(tokenAddres, amount) {
       const tokenInContract = new web3.eth.Contract(ERC20ABI, tokenAddres);
+      const approved = await tokenInContract.methods.allowance(this.$metamask.userAccount, routerV2Address).call()
+      if (new BigNumber(approved).isGreaterThanOrEqualTo(amount)) {
+        return
+      }
       await tokenInContract.methods.approve(routerV2Address, amount).send({ from: this.$metamask.userAccount })
     },
 
